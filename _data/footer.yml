@@ -1,10 +1,12 @@
 - links:
   - name: Site Map
     link: /sitemap.xml
+  - name: Buy this site
+    link: /buy-this-site/
   - name: Purchasing
     link: /purchase/
- # - name: Blog
- #   link: /blog/
+  - name: Education
+    link: /education/
  # - name: About
  #   link: /about/
   - name: Contact
