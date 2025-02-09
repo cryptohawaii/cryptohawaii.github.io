@@ -208,13 +208,3 @@ body {
     clear: both;
   }
 
-  .hero {
-    padding-top: 1rem;
-    padding-bottom: 0.5rem; /* Reduce bottom padding here */
-    height: 50% !important;
-  }
-  
-  .cta-button-alt {
-    height: 50%;
-    padding: 0.25rem 0.5rem; /* Adjust as needed */
-  }
