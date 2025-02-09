@@ -1,6 +1,8 @@
 ---
 date: 2020-08-02
 title: Sales effectiveness
+published: false
+featured: false
 categories:
   - sales
   - tips

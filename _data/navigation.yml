@@ -1,3 +1,7 @@
+- name: Updates
+  link: /updates/
+  new_window: true
+  highlight: true
 - name: Buy This Site
   link: /buy-this-site/
   new_window: true
@@ -18,11 +22,11 @@
   link: /contact/
   new_window: false
   highlight: false
-- name: Login
-  link: /
-  new_window: true
-  highlight: true
-- name: Sign Up
-  link: /
-  new_window: true
-  highlight: true
+#- name: Login
+#  link: /
+#  new_window: true
+#  highlight: true
+#- name: Sign Up
+#  link: /
+#  new_window: true
+#  highlight: true

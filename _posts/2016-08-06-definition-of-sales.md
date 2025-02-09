@@ -1,6 +1,8 @@
 ---
 date: 2020-08-06
 title: Definition of sales
+published: false
+featured: false
 categories:
   - sales
 author_staff_member: james

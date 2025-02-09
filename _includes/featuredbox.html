@@ -1,0 +1,37 @@
+<!-- begin post -->
+{% assign author = site.authors[post.author] %}
+<div class="col-sm-6 col-md-4">
+  <div class="featuredbox-card">
+    <a href="{{ post.url | absolute_url }}">
+      <img class="featuredbox-image" src="{{ site.baseurl }}/{{ post.cover }}" alt="{{ post.title }}">
+    </a>
+    <div class="featuredbox-body">
+      <h5 class="featuredbox-title">
+        <a href="{{ post.url | absolute_url }}">{{ post.title | truncatewords: 5 }}</a>
+      </h5>
+      <p class="featuredbox-text">{{ post.summary | strip_html }}</p>
+      <div class="featuredbox-metafooter">
+        <div class="featuredbox-wrapfooter">
+          {% if post.author %}
+          <span class="featuredbox-author-thumb">
+            <img class="featuredbox-author-img" src="{{ author.image }}" alt="{{ author.display_name }}">
+          </span>
+          <span class="featuredbox-author-meta">
+            <span class="featuredbox-post-name">
+              <a target="_blank" href="{{ author.web }}">{{ author.display_name }}</a>
+            </span><br/>
+          {% endif %}
+          <span class="featuredbox-post-date">{{ post.date | date_to_string }}</span>
+          </span>
+          <span class="featuredbox-post-read-more">
+            <a href="{{ post.url | absolute_url }}" title="Read Story">
+              <i class="fa fa-book-open"></i>
+            </a>
+          </span>
+          <div class="featuredbox-clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end post -->
