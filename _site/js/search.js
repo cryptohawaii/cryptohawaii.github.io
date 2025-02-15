@@ -1,3 +1,4 @@
+/*
 // assets/js/search.js
 (function() {
     var searchInput = document.getElementById('search-input');
@@ -13,3 +14,34 @@
         });
     });
   })();
+  
+*/
+
+document.addEventListener('DOMContentLoaded', function() {
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false
+  });
+});
+/*
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM fully loaded and parsed');
+  
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false
+  });
+
+  console.log('SimpleJekyllSearch initialized');
+});
+*/
