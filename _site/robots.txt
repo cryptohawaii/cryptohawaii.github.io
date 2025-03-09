@@ -1,3 +1,1 @@
-User-agent: *
-Allow: /
-Sitemap: https://hawaiidigitalcurrency.com/sitemap.xml
+Sitemap: http://localhost:4001/sitemap.xml
