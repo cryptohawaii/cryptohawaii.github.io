@@ -1,14 +1,16 @@
 - links:
   - name: Site Map
     link: /sitemap.xml
+  - name: News
+    link: /updates/
   - name: Buy this site
     link: /buy-this-site/
-  - name: Purchasing
+  - name: Getting Crypto
     link: /purchase/
-  - name: Education
+  - name: Quick Facts
     link: /education/
- # - name: About
- #   link: /about/
+  - name: About
+    link: /about/
   - name: Contact
     link: /contact/
 - links:
