@@ -55,66 +55,116 @@ This reserve could also serve as a powerful strategic asset during geopolitical 
 ## Selected Cryptocurrencies: Pros and Cons
 
 President Trump’s administration collaborated closely with financial experts, federal regulators, and industry leaders to select cryptocurrencies that align best with national economic interests and security needs. Cryptocurrencies chosen include established market leaders recognized for their market stability, technological robustness, and broad acceptance.
-<table style="width:100%; border-collapse: collapse;">
+<style type="text/css">
+.crypto-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.crypto-table th, .crypto-table td {
+  border: 1px solid black;
+  padding: 0.5rem;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+.crypto-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+.crypto-table td {
+  background-color: #ffffff;
+}
+@media screen and (max-width: 600px) {
+  .crypto-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .crypto-table th, .crypto-table td {
+    font-size: 0.8rem;
+    padding: 0.3rem;
+  }
+}
+</style>
+
+<table class="crypto-table" id="crypto-comparison-2025">
+  <caption>Key Cryptocurrency Metrics and Features (March 2025)</caption>
   <thead>
-    <tr style="background-color: #f2f2f2;">
-      <th style="border: 1px solid black; padding: 8px;">Cryptocurrency</th>
-      <th style="border: 1px solid black; padding: 8px;">Market Cap</th>
-      <th style="border: 1px solid black; padding: 8px;">Daily Volume</th>
-      <th style="border: 1px solid black; padding: 8px;">Circulation</th>
-      <th style="border: 1px solid black; padding: 8px;">Avg. Transaction Time</th>
-      <th style="border: 1px solid black; padding: 8px;">Pros</th>
-      <th style="border: 1px solid black; padding: 8px;">Cons</th>
+    <tr>
+      <th scope="col">Cryptocurrency</th>
+      <th scope="col">Market Cap</th>
+      <th scope="col">Daily Volume</th>
+      <th scope="col">Circulation</th>
+      <th scope="col">Avg. Transaction Time</th>
+      <th scope="col">Pros</th>
+      <th scope="col">Cons</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">Bitcoin (BTC)</td>
-      <td style="border: 1px solid black; padding: 8px;">$1.7T</td>
-      <td style="border: 1px solid black; padding: 8px;">$60B</td>
-      <td style="border: 1px solid black; padding: 8px;">19M</td>
-      <td style="border: 1px solid black; padding: 8px;">~10 mins</td>
-      <td style="border: 1px solid black; padding: 8px;">Highly liquid, secure, widely accepted</td>
-      <td style="border: 1px solid black; padding: 8px;">High energy use, scalability limitations</td>
+      <td>Bitcoin (BTC)</td>
+      <td>$1.7T</td>
+      <td>$60B</td>
+      <td>19M</td>
+      <td>~10 mins</td>
+      <td>Highly liquid, secure, widely accepted</td>
+      <td>High energy use, scalability limitations</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">Ethereum (ETH)</td>
-      <td style="border: 1px solid black; padding: 8px;">$700B</td>
-      <td style="border: 1px solid black; padding: 8px;">$30B</td>
-      <td style="border: 1px solid black; padding: 8px;">120M</td>
-      <td style="border: 1px solid black; padding: 8px;">~15-30 sec</td>
-      <td style="border: 1px solid black; padding: 8px;">Smart-contract functionality, robust developer community</td>
-      <td style="border: 1px solid black; padding: 8px;">High gas fees, network congestion</td>
+      <td>Ethereum (ETH)</td>
+      <td>$700B</td>
+      <td>$30B</td>
+      <td>120M</td>
+      <td>~15-30 sec</td>
+      <td>Smart-contract functionality, robust developer community</td>
+      <td>High gas fees, network congestion</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">Solana (SOL)</td>
-      <td style="border: 1px solid black; padding: 8px;">$100B</td>
-      <td style="border: 1px solid black; padding: 8px;">$4B</td>
-      <td style="border: 1px solid black; padding: 8px;">350M</td>
-      <td style="border: 1px solid black; padding: 8px;">~1-2 sec</td>
-      <td style="border: 1px solid black; padding: 8px;">High speed, low fees</td>
-      <td style="border: 1px solid black; padding: 8px;">Centralization concerns, recent outages</td>
+      <td>Solana (SOL)</td>
+      <td>$100B</td>
+      <td>$4B</td>
+      <td>350M</td>
+      <td>~1-2 sec</td>
+      <td>High speed, low fees</td>
+      <td>Centralization concerns, recent outages</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">Cardano (ADA)</td>
-      <td style="border: 1px solid black; padding: 8px;">$90B</td>
-      <td style="border: 1px solid black; padding: 8px;">$3B</td>
-      <td style="border: 1px solid black; padding: 8px;">35B</td>
-      <td style="border: 1px solid black; padding: 8px;">~20 sec</td>
-      <td style="border: 1px solid black; padding: 8px;">Secure blockchain, rigorous academic backing</td>
-      <td style="border: 1px solid black; padding: 8px;">Slower adoption, smaller ecosystem</td>
+      <td>Cardano (ADA)</td>
+      <td>$90B</td>
+      <td>$3B</td>
+      <td>35B</td>
+      <td>~20 sec</td>
+      <td>Secure blockchain, rigorous academic backing</td>
+      <td>Slower adoption, smaller ecosystem</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">Ripple (XRP)</td>
-      <td style="border: 1px solid black; padding: 8px;">$70B</td>
-      <td style="border: 1px solid black; padding: 8px;">$3.5B</td>
-      <td style="border: 1px solid black; padding: 8px;">53B</td>
-      <td style="border: 1px solid black; padding: 8px;">~3-5 sec</td>
-      <td style="border: 1px solid black; padding: 8px;">Rapid international transactions, financial institution support</td>
-      <td style="border: 1px solid black; padding: 8px;">Regulatory uncertainty, centralization concerns</td>
+      <td>Ripple (XRP)</td>
+      <td>$70B</td>
+      <td>$3.5B</td>
+      <td>53B</td>
+      <td>~3-5 sec</td>
+      <td>Rapid international transactions, financial institution support</td>
+      <td>Regulatory uncertainty, centralization concerns</td>
     </tr>
   </tbody>
 </table>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Table",
+  "about": {
+    "@type": "Dataset",
+    "name": "Major Cryptocurrency Metrics and Features (March 2025)",
+    "description": "Market capitalization, daily volume, circulation, average transaction times, pros, and cons of major cryptocurrencies as of March 23, 2025.",
+    "temporalCoverage": "2025-03-23",
+    "keywords": ["cryptocurrency", "Bitcoin", "Ethereum", "Solana", "Cardano", "Ripple", "market stats"]
+  }
+}
+</script>
 
 Bitcoin and Ethereum were selected due to their proven resilience, wide market acceptance, and significant existing institutional involvement. Solana was chosen for its transaction speed and efficiency, appealing to future scalability. Cardano provides a research-driven and secure alternative, suitable for long-term strategic holding. Ripple offers clear advantages for international financial operations, aligning with strategic cross-border financial goals.
 
