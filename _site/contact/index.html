@@ -121,11 +121,8 @@
 			
 				<p class="subtext">We'd love to help.</p>
 			
-			<div class="map" id="map"></div>
-
-
-<div class="contact-box">
-	<form action="/contact-success/" method="post" class="contact-form">
+			<div class="contact-box">
+	<!--form action="/contact-success/" method="post" class="contact-form">
 		<input type="hidden" name="_to" value="digitalcurrencyhawaii@gmail.com" />
 		<input type="text" name="_gotcha" style="display: none;">
 
@@ -139,16 +136,34 @@
 		<textarea name="message" id="message" placeholder="Enter your message..."></textarea>
 
 		<input type="submit" value="Send Message" />
-	</form>
+	</form-->
+	<form
+		action="https://formspree.io/f/xaqyvwjd"
+		method="POST"
+	>
+		<label>
+		Your email:
+		<input type="email" name="email">
+		</label>
+		<label>
+		Your message:
+		<textarea name="message"></textarea>
+		</label>
+		<!-- your other form fields go here -->
+		<button type="submit">Send</button>
+  </form>
 
 	<div class="contact-details">
-		<h3 class="editable">Address</h3>
-		<address><a target="_blank" href="https://www.google.com/maps/place/Honolulu%2C+HI">Honolulu, <br>HI</a></address>
+		<!--h3 class="editable">Address</h3>
+		<address><a target="_blank" href="https://www.google.com/maps/place/Honolulu%2C+HI">Honolulu, <br>HI</a>
+		</address-->
 
 		<h3 class="editable">Email</h3>
 		<p><a href="digitalcurrencyhawaii@gmail.com">digitalcurrencyhawaii@gmail.com</a></p>
 	</div>
 </div>
+
+<div class="map" id="map"></div>
 
 <script type="text/javascript">
 	window.mapData = {"latitude":21.3075,"longitude":-157.8574,"address":"Honolulu, HI","zoom":13};
