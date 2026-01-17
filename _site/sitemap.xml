@@ -3,6 +3,21 @@
     
     
     <url>
+        <loc>http://localhost:4001/updates/hawaii-crypto-position-2026</loc>
+        
+        <lastmod>2026-01-17T00:00:00+00:00</lastmod>
+        
+        
+        <changefreq>monthly</changefreq>
+        
+        
+        <priority>0.5</priority>
+        
+    </url>
+    
+    
+    
+    <url>
         <loc>http://localhost:4001/updates/tariffs</loc>
         
         <lastmod>2025-03-23T00:00:00+00:00</lastmod>
@@ -96,7 +111,7 @@
     <url>
         <loc>http://localhost:4001/404.html</loc>
         
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
         
         
         <changefreq>monthly</changefreq>
@@ -111,7 +126,7 @@
     <url>
         <loc>http://localhost:4001/about/</loc>
         
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
         
         
         <changefreq>monthly</changefreq>
@@ -126,7 +141,7 @@
     <url>
         <loc>http://localhost:4001/buy-this-site/</loc>
         
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
         
         
         <changefreq>monthly</changefreq>
@@ -141,7 +156,7 @@
     <url>
         <loc>http://localhost:4001/contact-success/</loc>
         
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
         
         
         <changefreq>monthly</changefreq>
@@ -156,7 +171,7 @@
     <url>
         <loc>http://localhost:4001/contact/</loc>
         
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
         
         
         <changefreq>monthly</changefreq>
@@ -171,7 +186,7 @@
     <url>
         <loc>http://localhost:4001/education/</loc>
         
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
         
         
         <changefreq>monthly</changefreq>
@@ -186,7 +201,7 @@
     <url>
         <loc>http://localhost:4001/blog/</loc>
         
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
         
         
         <changefreq>monthly</changefreq>
@@ -201,7 +216,7 @@
     <url>
         <loc>http://localhost:4001/</loc>
         
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
         
         
         <changefreq>monthly</changefreq>
@@ -216,112 +231,7 @@
     <url>
         <loc>http://localhost:4001/purchase/</loc>
         
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
-        
-        
-        <changefreq>monthly</changefreq>
-        
-        
-        <priority>0.3</priority>
-        
-    </url>
-    
-    
-    
-    <url>
-        <loc>http://localhost:4001/robots_old.txt</loc>
-        
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
-        
-        
-        <changefreq>monthly</changefreq>
-        
-        
-        <priority>0.3</priority>
-        
-    </url>
-    
-    
-    
-    <url>
-        <loc>http://localhost:4001/css/screen.css</loc>
-        
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
-        
-        
-        <changefreq>monthly</changefreq>
-        
-        
-        <priority>0.3</priority>
-        
-    </url>
-    
-    
-    
-    <url>
-        <loc>http://localhost:4001/search.json</loc>
-        
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
-        
-        
-        <changefreq>monthly</changefreq>
-        
-        
-        <priority>0.3</priority>
-        
-    </url>
-    
-    
-    
-    <url>
-        <loc>http://localhost:4001/sitemap.xml</loc>
-        
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
-        
-        
-        <changefreq>monthly</changefreq>
-        
-        
-        <priority>0.3</priority>
-        
-    </url>
-    
-    
-    
-    <url>
-        <loc>http://localhost:4001/updates/</loc>
-        
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
-        
-        
-        <changefreq>monthly</changefreq>
-        
-        
-        <priority>0.3</priority>
-        
-    </url>
-    
-    
-    
-    <url>
-        <loc>http://localhost:4001/category/updates/</loc>
-        
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
-        
-        
-        <changefreq>monthly</changefreq>
-        
-        
-        <priority>0.3</priority>
-        
-    </url>
-    
-    
-    
-    <url>
-        <loc>http://localhost:4001/feed.xml</loc>
-        
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
         
         
         <changefreq>monthly</changefreq>
@@ -336,7 +246,97 @@
     <url>
         <loc>http://localhost:4001/robots.txt</loc>
         
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
+        
+        
+        <changefreq>monthly</changefreq>
+        
+        
+        <priority>0.3</priority>
+        
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4001/css/screen.css</loc>
+        
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
+        
+        
+        <changefreq>monthly</changefreq>
+        
+        
+        <priority>0.3</priority>
+        
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4001/search.json</loc>
+        
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
+        
+        
+        <changefreq>monthly</changefreq>
+        
+        
+        <priority>0.3</priority>
+        
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4001/sitemap.xml</loc>
+        
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
+        
+        
+        <changefreq>monthly</changefreq>
+        
+        
+        <priority>0.3</priority>
+        
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4001/updates/</loc>
+        
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
+        
+        
+        <changefreq>monthly</changefreq>
+        
+        
+        <priority>0.3</priority>
+        
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4001/category/updates/</loc>
+        
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
+        
+        
+        <changefreq>monthly</changefreq>
+        
+        
+        <priority>0.3</priority>
+        
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4001/feed.xml</loc>
+        
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
         
         
         <changefreq>monthly</changefreq>
@@ -351,7 +351,7 @@
     <url>
         <loc>http://localhost:4001/css/screen.css.map</loc>
         
-        <lastmod>2025-12-29T19:04:45+00:00</lastmod>
+        <lastmod>2026-01-17T21:03:42+00:00</lastmod>
         
         
         <changefreq>monthly</changefreq>
