@@ -1,0 +1,35 @@
+---
+layout: default
+title: Updates
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+
+<section id="updates">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-12">
+        <div class="section-title">
+          <h2 style="color: aliceblue;"><span>{{ page.title }}</span></h2>
+        </div>
+        <div class="listrecent">
+          {% for post in site.posts %}
+            {% if post.categories contains "updates" %}
+              <div class="post-row">
+                <a href="{{ post.url }}" class="card">
+                  <div class="card-image">
+                    <img src="{{ post.cover }}" alt="{{ post.title }}">
+                  </div>
+                  <div class="card-content">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.description }}</p>
+                  </div>
+                </a>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,15 +1,44 @@
 <nav>
-	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
-	<a class="editor-link btn" href="cloudcannon:collections/_data/navigation.yml" class="btn"><strong>&#9998;</strong> Edit navigation</a>
-	{% for link in site.data.navigation %}
-		{% assign class = "" %}
-		{% if link.highlight %}
-			{% assign class = class | append: " highlight" %}
-		{% endif %}
+    <a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
+    <a class="editor-link btn" href="cloudcannon:collections/_data/navigation.yml" class="btn"><strong>&#9998;</strong> Edit navigation</a>
+    
+    <!-- Add Search Box -->
+    <div id="search-container" style="display: inline-block; margin-right: 20px;">
+        <input type="text" id="search-input" placeholder="Search..." style="padding: 5px; border-radius: 4px; border: 1px solid #ccc;">
+        <ul id="results-container" style="position: absolute; background: white; list-style: none; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); display: none; z-index: 1000;"></ul>
+    </div>
+    
+    {% for link in site.data.navigation %}
+        {% assign class = "" %}
+        {% if link.highlight %}
+            {% assign class = class | append: " highlight" %}
+        {% endif %}
 
-		{% if link.link == page.url %}
-			{% assign class = class | append: " active" %}
-		{% endif %}
-		<a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
-	{% endfor %}
+        {% if link.link == page.url %}
+            {% assign class = class | append: " active" %}
+        {% endif %}
+        <a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
+    {% endfor %}
 </nav>
+
+<!-- Search Script -->
+<script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ site.baseurl }}/search.json',
+    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+    noResultsText: 'No results found'
+  })
+  
+  // Show/hide results
+  document.getElementById('search-input').addEventListener('focus', function() {
+    document.getElementById('results-container').style.display = 'block';
+  });
+  document.getElementById('search-input').addEventListener('blur', function() {
+    setTimeout(function() {
+      document.getElementById('results-container').style.display = 'none';
+    }, 200);
+  });
+</script>

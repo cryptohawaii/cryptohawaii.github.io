@@ -47,6 +47,7 @@
 		<!--script data-ad-client="ca-pub-4379410432613892" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script-->
 
 		<link rel="stylesheet" href="/css/screen.css">
+		<!--link rel="stylesheet" href="/css/style.css"-->
 		<link rel="icon" type="image/png" href="/favicon.png">
 
 		
@@ -63,53 +64,67 @@
 				<div class="company-name"><a href="/"><img src="/images/logo.svg
 " alt="Digital Currency Innovation Lab" style="width:25%; height:25%" /></a></div>
 				<nav>
-	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
-	<a class="editor-link btn" href="cloudcannon:collections/_data/navigation.yml" class="btn"><strong>&#9998;</strong> Edit navigation</a>
-	
-		
-		
+    <a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
+    <a class="editor-link btn" href="cloudcannon:collections/_data/navigation.yml" class="btn"><strong>&#9998;</strong> Edit navigation</a>
+    
+    <!-- Add Search Box -->
+    <div id="search-container" style="display: inline-block; margin-right: 20px;">
+        <input type="text" id="search-input" placeholder="Search..." style="padding: 5px; border-radius: 4px; border: 1px solid #ccc;">
+        <ul id="results-container" style="position: absolute; background: white; list-style: none; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); display: none; z-index: 1000;"></ul>
+    </div>
+    
+    
+        
+        
 
-		
-		<a href="/updates/
+        
+        <a href="/updates/
 " class=" highlight active" target="_blank">Updates & News</a>
-	
-		
-		
+    
+        
+        
 
-		
-		<a href="/purchase/
-" class="" target="_blank">Getting Crypto</a>
-	
-		
-		
+        
+        <a href="
+" class="" ></a>
+    
+        
+        
 
-		
-		<a href="/education/
-" class="" target="_blank">Quick Facts</a>
-	
-		
-		
-
-		
-		<a href="/buy-this-site/
-" class="" target="_blank">Buy This Site</a>
-	
-		
-		
-
-		
-		<a href="/about/
+        
+        <a href="/about/
 " class="" >About</a>
-	
-		
-		
+    
+        
+        
 
-		
-		<a href="/contact/
+        
+        <a href="/contact/
 " class="" >Contact</a>
-	
+    
 </nav>
 
+<!-- Search Script -->
+<script src="/js/simple-jekyll-search.min.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+    noResultsText: 'No results found'
+  })
+  
+  // Show/hide results
+  document.getElementById('search-input').addEventListener('focus', function() {
+    document.getElementById('results-container').style.display = 'block';
+  });
+  document.getElementById('search-input').addEventListener('blur', function() {
+    setTimeout(function() {
+      document.getElementById('results-container').style.display = 'none';
+    }, 200);
+  });
+</script>
 			</div>
 		</header>
 		<link rel="stylesheet" href="/css/style.css">
@@ -117,7 +132,7 @@
 <section id="updates">
   <div class="container">
     <div class="row">
-      <div class="col-md-9 col-lg-9">
+      <div class="col-md-12 col-lg-12">
         <div class="section-title">
           <h2 style="color: aliceblue;"><span>Updates</span></h2>
         </div>
@@ -223,63 +238,6 @@
           
         </div>
       </div>
-
-      <!-- Sidebar -->
-      <!--div class="col-md-3 col-lg-3"-->
-      <div class="col-sm-4">
-
-        <!-- _includes/sidebar.html -->
-<div class="sidebar">
-    <div class="sidebar-section">
-      <h5><span>Search</span></h5>
-      <!-- Html Elements for Search -->
-<div id="search-container">
-  <input type="text" style="width: 100%; padding: 8px; border: 1px solid black;" id="search-input" placeholder="Search posts here...">
-  <ul id="results-container"></ul>
-</div>
-
-<!-- Script pointing to search.js -->
- <!-- Include Simple-Jekyll-Search library -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.2/simple-jekyll-search.min.js"></script>
- <script src="/js/search.js"></script>
-
-<!-- Configuration -->
-<script>
-  SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('results-container'),
-      json: '/search.json'
-  })
-</script>
-<!--script>
-  document.addEventListener('DOMContentLoaded', function() {
-    SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('results-container'),
-      json: '/search.json',
-      searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-      noResultsText: 'No results found',
-      limit: 10,
-      fuzzy: false
-    });
-  });
-</script-->
-    </div>
-  
-    <div class="sidebar-section">
-      <h5><span>Useful Links</span></h5>
-      <ul style="list-style: none;">
-        <li><a target="_blank" rel="noopener noreferrer" href="https://x.com/HawaiiCurrency">Social</a></li>
-        <!--li><a target="_blank" rel="noopener noreferrer" href="/thoughts/">TODO 2</a></li-->
-      </ul>
-    </div>
-  
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- sidebar -->
-    <!--TODO google ads typically goes here-->
-  </div>
-      </div>
-      <!-- End Sidebar -->
     </div>
   </div>
 </section>

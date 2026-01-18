@@ -2,18 +2,23 @@
   link: /updates/
   new_window: true
   highlight: true
-- name: Getting Crypto
-  link: /purchase/
-  new_window: true
-  highlight: false
-- name: Quick Facts
-  link: /education/
-  new_window: true
-  highlight: false
-- name: Buy This Site
-  link: /buy-this-site/
-  new_window: true
-  highlight: false
+- #name: More Technical
+  #link: /technical/
+  #new_window: true
+  #highlight: true
+  
+#- name: Getting Crypto
+#  link: /purchase/
+#  new_window: true
+#  highlight: false
+#- name: Quick Facts
+#  link: /education/
+#  new_window: true
+# highlight: false
+#- name: Buy This Site
+#  link: /buy-this-site/
+#  new_window: true
+#  highlight: false
 - name: About
   link: /about/
   new_window: false
