@@ -1,303 +1,73 @@
-<!doctype html>
+[
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+  {
+    "title":       "Why Hawaii Is Better Positioned for Crypto Than You Might Think",
+    "url":         "/updates/hawaii-crypto-position-2026",
+    "category":    "updates",
+    "date":        "2026-01-17",
+    "summary":     "Why Hawaiʻi is uniquely positioned to benefit from crypto, stablecoins, and fintech innovation, covering U.S. regulation updates, global stablecoin growth, and local economic impact.",
+    "label":       "hawaiicrypto, stablecoins, fintech, cryptoregulation, hawaiieconomy",
+    "description": "An in-depth, beginner-friendly analysis of why Hawaiʻi is better positioned for crypto than many realize. Covers U.S. crypto regulation, stablecoins, fintech expansion, remittances, merchant fees, and how blockchain adoption could strengthen Hawaiʻi’s economy in 2026 and beyond."
+  },
 
-		<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Hawaii Crypto Currency | Crypto and Digital Coins and Currency for Hawaii.</title>
-<meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="Hawaii Crypto Currency" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Crypto and Digital Coins and Currency for Hawaii." />
-<meta property="og:description" content="Crypto and Digital Coins and Currency for Hawaii." />
-<link rel="canonical" href="http://localhost:4001/search.json" />
-<meta property="og:url" content="http://localhost:4001/search.json" />
-<meta property="og:site_name" content="Hawaii Crypto Currency" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Hawaii Crypto Currency" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Crypto and Digital Coins and Currency for Hawaii.","headline":"Hawaii Crypto Currency","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4001/siteicon.png"}},"url":"http://localhost:4001/search.json"}</script>
-<!-- End Jekyll SEO tag -->
+  {
+    "title":       "Tariffs Explained: Recent Market Volatility, Crypto Reactions, and Hawai'i's Economic Impact",
+    "url":         "/updates/tariffs",
+    "category":    "updates",
+    "date":        "2025-03-23",
+    "summary":     "A clear explanation of recent tariff developments, stock market fluctuations, crypto market reactions, and the specific impact on Hawai'i's economy.",
+    "label":       "cryptohawaii, hawaiicrypto, hawaiicurrency",
+    "description": "An in-depth yet simple explanation of tariffs, their recent impacts on the stock market, cryptocurrency reactions, and how these developments affect Hawai'i."
+  },
 
-		<link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="Hawaii Crypto Currency" />
+  {
+    "title":       "Hawai'i's Cryptocurrency Regulatory Evolution and Coinbase's Return",
+    "url":         "/updates/hawaii-crypto-regulation-coinbase",
+    "category":    "updates",
+    "date":        "2025-03-23",
+    "summary":     "A deep dive into the recent cryptocurrency regulatory reforms in Hawai'i and Coinbase's return to the local market.",
+    "label":       "cryptohawaii, hawaiicrypto, hawaiicurrency",
+    "description": "Exploring Hawai'i's evolving cryptocurrency regulatory landscape, detailing Coinbase's return, and implications for the local economy."
+  },
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7MD8YP4DW"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+  {
+    "title":       "The Presidents Cryptocurrency Strategic Reserve and Federal Reserve Integration: What It Means for Hawaii",
+    "url":         "/updates/trump-crypto-reserve",
+    "category":    "updates",
+    "date":        "2025-03-06",
+    "summary":     "Exploring President Trump's executive order establishing a strategic cryptocurrency reserve and integrating crypto into the Federal Reserve, highlighting implications for Hawaii.",
+    "label":       "cryptohawaii, bitcoinhawaii, btchawaii, hawaiicrypto, hawaiicurrency",
+    "description": "Detailed analysis of President Trump's executive order on creating a strategic cryptocurrency reserve and Federal Reserve integration, including impacts on cryptocurrency markets and specific benefits for Hawaii."
+  },
 
-		  gtag('config', 'G-F7MD8YP4DW');
-		</script>
-		<!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-121492082-2"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+  {
+    "title":       "Riding the XRP Wave: Unpacking the Recent Hype and Its Impact in Hawaii",
+    "url":         "/thoughts/xrp-hype-hawaii",
+    "category":    "updates",
+    "date":        "2025-02-23",
+    "summary":     "A deep dive into the recent surge of excitement around XRP and Ripple, exploring its origins, price potential, and how it could shape Hawaii’s fintech future.",
+    "label":       "Cryptocurrency, Blockchain, XRP, Ripple, cryptohawaii, fintechhawaii, ",
+    "description": "This post breaks down the XRP hype from the last few weeks, explains what sets Ripple apart from Bitcoin, and highlights its potential benefits for Hawaii’s blockchain and fintech community."
+  },
 
-			gtag('config', 'UA-121492082-2');
-		</script-->
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4379410432613892"
-     crossorigin="anonymous"></script>
-		<!--script data-ad-client="ca-pub-4379410432613892" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script-->
+  {
+    "title":       "The Future of Fintech in Hawaii: Market Analysis and Forecast",
+    "url":         "/updates/hawaii-fintech-outlook",
+    "category":    "updates",
+    "date":        "2025-02-15",
+    "summary":     "A detailed market analysis of the current fintech landscape in Hawaii and a forecast for the future of fintech in the islands.",
+    "label":       "cryptohawaii, bitcoinhawaii, btchawaii, hawaiicrypto, hawaiicurrency, hawaii",
+    "description": "An in-depth examination of Hawaii's fintech scene, exploring current trends, market challenges, government initiatives, and a forward-looking forecast for the future of fintech in Hawaii."
+  },
 
-		<link rel="stylesheet" href="/css/screen.css">
-		<!--link rel="stylesheet" href="/css/style.css"-->
-		<link rel="icon" type="image/png" href="/favicon.png">
+  {
+    "title":       "Blockchain 101 - Aloha to a New Digital Frontier",
+    "url":         "/updates/welcome",
+    "category":    "updates",
+    "date":        "2025-02-07",
+    "summary":     "An in-depth guide for the people of Hawaii explaining what blockchain is.",
+    "label":       "Blockchain, Education, Fintech",
+    "description": "Discover the fundamentals of blockchain technology, its benefits, challenges, and its potential impact on Hawaii’s digital economy."
+  }
 
-		
-
-		<meta name="coinzilla" content="71e59202d25266778c1f72ed09a431b3" />
-
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4379410432613892"
-     crossorigin="anonymous"></script>
-		
-	</head>
-	<body>
-		<header>
-			<div class="container">
-				<div class="company-name"><a href="/"><img src="/images/logo.svg
-" alt="Digital Currency Innovation Lab" style="width:25%; height:25%" /></a></div>
-				<nav>
-    <a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
-    <a class="editor-link btn" href="cloudcannon:collections/_data/navigation.yml" class="btn"><strong>&#9998;</strong> Edit navigation</a>
-    
-    <!-- Add Search Box -->
-    <div id="search-container" style="display: inline-block; margin-right: 20px;">
-        <input type="text" id="search-input" placeholder="Search..." style="padding: 5px; border-radius: 4px; border: 1px solid #ccc;">
-        <ul id="results-container" style="position: absolute; background: white; list-style: none; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); display: none; z-index: 1000;"></ul>
-    </div>
-    
-    
-        
-        
-
-        
-        <a href="/updates/
-" class=" highlight" target="_blank">Updates & News</a>
-    
-        
-        
-
-        
-        <a href="
-" class="" ></a>
-    
-        
-        
-
-        
-        <a href="/about/
-" class="" >About</a>
-    
-        
-        
-
-        
-        <a href="/contact/
-" class="" >Contact</a>
-    
-</nav>
-
-<!-- Search Script -->
-<script src="/js/simple-jekyll-search.min.js"></script>
-<script>
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/search.json',
-    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-    noResultsText: 'No results found'
-  })
-  
-  // Show/hide results
-  document.getElementById('search-input').addEventListener('focus', function() {
-    document.getElementById('results-container').style.display = 'block';
-  });
-  document.getElementById('search-input').addEventListener('blur', function() {
-    setTimeout(function() {
-      document.getElementById('results-container').style.display = 'none';
-    }, 200);
-  });
-</script>
-			</div>
-		</header>
-		<div class="content">
-	<section class="page">
-		<div class="container ">
-			
-			
-			[
-  
-    {
-      "title"    : "Why Hawaii Is Better Positioned for Crypto Than You Might Think",
-      "url"      : "/updates/hawaii-crypto-position-2026",
-      "category" : "updates",
-      "date"     : "2026-01-17 00:00:00 +0000",
-      "summary"  : "Why Hawaiʻi is uniquely positioned to benefit from crypto, stablecoins, and fintech innovation, covering U.S. regulation updates, global stablecoin growth, and local economic impact.",
-      "label"  : "hawaiicryptostablecoinsfintechcryptoregulationhawaiieconomy",
-      "description" : "An in-depth, beginner-friendly analysis of why Hawaiʻi is better positioned for crypto than many realize. Covers U.S. crypto regulation, stablecoins, fintech expansion, remittances, merchant fees, and how blockchain adoption could strengthen Hawaiʻi’s economy in 2026 and beyond.",
-      "summary" : "Why Hawaiʻi is uniquely positioned to benefit from crypto, stablecoins, and fintech innovation, covering U.S. regulation updates, global stablecoin growth, and local economic impact."
-    } ,
-  
-    {
-      "title"    : "Tariffs Explained: Recent Market Volatility, Crypto Reactions, and Hawai&#39;i&#39;s Economic Impact",
-      "url"      : "/updates/tariffs",
-      "category" : "updates",
-      "date"     : "2025-03-23 00:00:00 +0000",
-      "summary"  : "A clear explanation of recent tariff developments, stock market fluctuations, crypto market reactions, and the specific impact on Hawai'i's economy.",
-      "label"  : "cryptohawaiihawaiicryptohawaiicurrency",
-      "description" : "An in-depth yet simple explanation of tariffs, their recent impacts on the stock market, cryptocurrency reactions, and how these developments affect Hawai'i.",
-      "summary" : "A clear explanation of recent tariff developments, stock market fluctuations, crypto market reactions, and the specific impact on Hawai'i's economy."
-    } ,
-  
-    {
-      "title"    : "Hawai&#39;i&#39;s Cryptocurrency Regulatory Evolution and Coinbase&#39;s Return",
-      "url"      : "/updates/hawaii-crypto-regulation-coinbase",
-      "category" : "updates",
-      "date"     : "2025-03-23 00:00:00 +0000",
-      "summary"  : "A deep dive into the recent cryptocurrency regulatory reforms in Hawai'i and Coinbase's return to the local market.",
-      "label"  : "cryptohawaiihawaiicryptohawaiicurrency",
-      "description" : "Exploring Hawai'i's evolving cryptocurrency regulatory landscape, detailing Coinbase's return, and implications for the local economy.",
-      "summary" : "A deep dive into the recent cryptocurrency regulatory reforms in Hawai'i and Coinbase's return to the local market."
-    } ,
-  
-    {
-      "title"    : "The Presidents Cryptocurrency Strategic Reserve and Federal Reserve Integration: What It Means for Hawaii",
-      "url"      : "/updates/trump-crypto-reserve",
-      "category" : "updates",
-      "date"     : "2025-03-06 00:00:00 +0000",
-      "summary"  : "Exploring President Trump's executive order establishing a strategic cryptocurrency reserve and integrating crypto into the Federal Reserve, highlighting implications for Hawaii.",
-      "label"  : "cryptohawaiibitcoinhawaiibtchawaiihawaiicryptohawaiicurrency",
-      "description" : "Detailed analysis of President Trump's executive order on creating a strategic cryptocurrency reserve and Federal Reserve integration, including impacts on cryptocurrency markets and specific benefits for Hawaii.",
-      "summary" : "Exploring President Trump's executive order establishing a strategic cryptocurrency reserve and integrating crypto into the Federal Reserve, highlighting implications for Hawaii."
-    } ,
-  
-    {
-      "title"    : "Riding the XRP Wave: Unpacking the Recent Hype and Its Impact in Hawaii",
-      "url"      : "/thoughts/xrp-hype-hawaii",
-      "category" : "updates",
-      "date"     : "2025-02-23 00:00:00 +0000",
-      "summary"  : "A deep dive into the recent surge of excitement around XRP and Ripple, exploring its origins, price potential, and how it could shape Hawaii’s fintech future.",
-      "label"  : "CryptocurrencyBlockchainXRPRipplecryptohawaiifintechhawaii",
-      "description" : "This post breaks down the XRP hype from the last few weeks, explains what sets Ripple apart from Bitcoin, and highlights its potential benefits for Hawaii’s blockchain and fintech community.",
-      "summary" : "A deep dive into the recent surge of excitement around XRP and Ripple, exploring its origins, price potential, and how it could shape Hawaii’s fintech future."
-    } ,
-  
-    {
-      "title"    : "The Future of Fintech in Hawaii: Market Analysis and Forecast",
-      "url"      : "/updates/hawaii-fintech-outlook",
-      "category" : "updates",
-      "date"     : "2025-02-15 00:00:00 +0000",
-      "summary"  : "A detailed market analysis of the current fintech landscape in Hawaii and a forecast for the future of fintech in the islands.",
-      "label"  : "cryptohawaiibitcoinhawaiibtchawaiihawaiicryptohawaiicurrencyhawaii",
-      "description" : "An in-depth examination of Hawaii's fintech scene, exploring current trends, market challenges, government initiatives, and a forward-looking forecast for the future of fintech in Hawaii.",
-      "summary" : "A detailed market analysis of the current fintech landscape in Hawaii and a forecast for the future of fintech in the islands."
-    } ,
-  
-    {
-      "title"    : "Blockchain 101 - Aloha to a New Digital Frontier",
-      "url"      : "/updates/welcome",
-      "category" : "updates",
-      "date"     : "2025-02-07 00:00:00 +0000",
-      "summary"  : "An in-depth guide for the people of Hawaii explaining what blockchain is.",
-      "label"  : "BlockchainEducationFintech",
-      "description" : "Discover the fundamentals of blockchain technology, its benefits, challenges, and its potential impact on Hawaii’s digital economy.",
-      "summary" : "An in-depth guide for the people of Hawaii explaining what blockchain is."
-    } 
-  
 ]
-
-		</div>
-	</section>
-</div>
-
-		<footer>
-			<div class="container">
-				<p class="editor-link"><a href="cloudcannon:collections/_data/footer.yml" class="btn"><strong>&#9998;</strong> Edit footer</a></p>
-				<div class="footer-columns">
-					
-					<ul class="footer-links">
-						
-							<li><a  href="/sitemap.xml
-" -->
-								
-								Site Map</a></li>
-						
-							<li><a  href="/updates/
-" -->
-								
-								News</a></li>
-						
-							<li><a  href="/buy-this-site/
-" -->
-								
-								Buy this site</a></li>
-						
-							<li><a  href="/purchase/
-" -->
-								
-								Getting Crypto</a></li>
-						
-							<li><a  href="/education/
-" -->
-								
-								Quick Facts</a></li>
-						
-							<li><a  href="/about/
-" -->
-								
-								About</a></li>
-						
-							<li><a  href="/contact/
-" -->
-								
-								Contact</a></li>
-						
-					</ul>
-					
-					<ul class="footer-links">
-						
-							<li><a target="_blank" href="/
-" -->
-								
-								Login</a></li>
-						
-							<li><a target="_blank" href="/
-" -->
-								
-								Sign Up</a></li>
-						
-							<li><a target="_blank" href="/
-" -->
-								
-								Docs</a></li>
-						
-							<li><a target="_blank" href="/
-" -->
-								
-								Status</a></li>
-						
-					</ul>
-					
-					<ul class="footer-links">
-						
-					</ul>
-					
-				</div>
-				<!--p class="copyright">&copy; 2026 MyApp Ltd. • <a href="#">Terms</a> &amp; <a href="#">Privacy</a> • <a href="https://cloudcannon.com/">Template by CloudCannon</a></p-->
-			</div>
-		</footer>
-		<script>
-			document.getElementById("open-nav").onclick = function () {
-				document.body.classList.toggle("nav-open");
-				return false;
-			};
-		</script>
-	</body>
-</html>

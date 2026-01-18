@@ -2,11 +2,10 @@
   link: /updates/
   new_window: true
   highlight: true
-- #name: More Technical
-  #link: /technical/
-  #new_window: true
-  #highlight: true
-  
+#- name: More Technical
+#  link: /technical/
+#  new_window: true
+#  highlight: true
 #- name: Getting Crypto
 #  link: /purchase/
 #  new_window: true

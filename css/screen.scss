@@ -25,3 +25,38 @@
     overflow: hidden;
     text-align: center;
 }
+
+#results-container {
+    background: white !important;
+    color: #333 !important;
+  }
+  #results-container a {
+    color: #000 !important;
+  }
+  #results-container small {
+    color: #666 !important;
+  }
+  @media (prefers-color-scheme: dark) {
+    #results-container { background: #1a1a1a !important; color: #fff !important; }
+    #results-container a { color: #fff !important; }
+    #results-container small { color: #ccc !important; }
+  }
+
+  /* Search Result Spacing Fixes */
+#results-container li {
+    padding: 10px 15px !important;   /* Adds internal breathing room */
+    margin-bottom: 10x !important;  /* Adds space between the rows */
+    line-height: 1 !important;     /* Increases vertical text spacing */
+    border-bottom: 1px solid #eee;   /* Adds a faint separator line */
+}
+
+#results-container li:last-child {
+    margin-bottom: 0 !important;
+    border-bottom: none;
+}
+
+#results-container a {
+    display: block !important;
+    margin-bottom: 5px !important;   /* Space between the Title and the Date/Category */
+    font-size: 1 rem !important;    /* Make title slightly larger */
+}

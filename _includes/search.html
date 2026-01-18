@@ -1,32 +1,65 @@
-<!-- Html Elements for Search -->
-<div id="search-container">
-  <input type="text" style="width: 100%; padding: 8px; border: 1px solid black;" id="search-input" placeholder="Search posts here...">
-  <ul id="results-container"></ul>
+<!-- Search container -->
+<div id="search-container" style="display: inline-block; margin-right: 20px; position: relative;">
+  <input type="text" id="search-input" placeholder="Search..." 
+         style="padding: 12px 18px; border-radius: 10px; border: 1px solid #ccc; width: 260px; font-size: 16px;">
+  <ul id="results-container" 
+      style="position: absolute; top: 100%; left: 0; right: 0; 
+             background: white; list-style: none; padding: 24px 0; margin: 12px 0 0 0; 
+             box-shadow: 0 12px 28px rgba(0,0,0,0.25); border-radius: 14px; 
+             max-height: 460px; overflow-y: auto; z-index: 1000; display: none;
+             color: #222; font-size: 16px; line-height: 1.65;">
+  </ul>
 </div>
 
-<!-- Script pointing to search.js -->
- <!-- Include Simple-Jekyll-Search library -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.2/simple-jekyll-search.min.js"></script>
- <script src="/js/search.js"></script>
-
-<!-- Configuration -->
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
 <script>
+  const input = document.getElementById('search-input');
+  const results = document.getElementById('results-container');
+
   SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('results-container'),
-      json: '/search.json'
-  })
-</script>
-<!--script>
-  document.addEventListener('DOMContentLoaded', function() {
-    SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('results-container'),
-      json: '/search.json',
-      searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-      noResultsText: 'No results found',
-      limit: 10,
-      fuzzy: false
-    });
+    searchInput: input,
+    resultsContainer: results,
+    json: '{{ "/search.json" | relative_url }}',
+    searchResultTemplate: `
+      <li style="padding: 20px 28px; margin: 0 0 24px 0; 
+                 background: #fdfdfd; border-radius: 10px; 
+                 border: 1px solid #e8e8e8; transition: all 0.2s ease;">
+        <a href="{url}" style="color: #000 !important; text-decoration: none; font-weight: 600; 
+                               display: block; line-height: 1.5; margin-bottom: 10px;">
+          {title}
+        </a>
+        <small style="color: #666; font-size: 14px; display: block; line-height: 1.5;">
+          {date} • {category}
+        </small>
+      </li>
+    `,
+    noResultsText: '<li style="padding: 28px; color: #888; font-style: italic; text-align: center; font-size: 15px;">No results found</li>',
+    limit: 8,
+    fuzzy: true
   });
-</script-->
+
+  // Dark mode handling (updated for more generous spacing feel)
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  function updateSearchColors() {
+    const isDark = mediaQuery.matches;
+    results.style.background = isDark ? '#0d0d0d' : 'white';
+    results.style.color      = isDark ? '#f0f0f0' : '#222';
+    
+    const linkColor = isDark ? '#c0e0ff' : '#000';
+    results.querySelectorAll('a').forEach(a => { a.style.color = linkColor + ' !important'; });
+
+    results.querySelectorAll('li').forEach(li => {
+      li.style.background = isDark ? '#1c1c1c' : '#fdfdfd';
+      li.style.borderColor = isDark ? '#444' : '#e8e8e8';
+    });
+  }
+  mediaQuery.addEventListener('change', updateSearchColors);
+  updateSearchColors();
+
+  // Show/hide
+  input.addEventListener('focus', () => { results.style.display = 'block'; });
+  input.addEventListener('input', () => { results.style.display = 'block'; });
+  input.addEventListener('blur', () => {
+    setTimeout(() => { results.style.display = 'none'; }, 280);
+  });
+</script>
