@@ -1,0 +1,122 @@
+# ----
+# Site
+
+title: Hawaii Crypto Currency
+url: "https://hawaiidigitalcurrency.com"
+baseurl:
+disqus_shortname:
+
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: /siteicon.png
+description: Hawaii-focused cryptocurrency, blockchain, and digital currency explainers for residents, small businesses, and local innovators.
+author:
+  name: Hawaii Crypto Currency
+  email:
+  twitter: HawaiiCurrency # twitter username without the @ symbol
+social:
+  name: Hawaii Crypto Currency
+  links:
+    - https://x.com/HawaiiCurrency
+
+
+# -----
+# Build
+
+timezone: HST/UTC
+
+collections:
+  staff_members:
+    _hide_content: true
+
+paginate: 10
+paginate_path: "/blog/:num/"
+permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      _options:
+        content:
+          width: 1500
+          height: 2500
+  -
+    scope:
+      path: ""
+      type: "staff_members"
+    values:
+      _options:
+        image_path:
+          width: 600
+          height: 600
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "index.html"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "contact.html"
+    values:
+      full_width: true
+
+jekyll-archives:
+  enabled:
+    - categories
+
+plugins:
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+
+exclude:
+  - AGENTS.md
+  - build.sh
+  - Gemfile
+  - Gemfile.lock
+  - old_Gemfile
+  - README.md
+  - LICENCE
+  - _config_original.yml
+  - index_original.md
+  - remove_metadata.py
+  - _posts/updates/2026-02-22-lt-gov-scandal.md
+  - images/updates/2026-02-22
+  - _site
+  - .jekyll-cache
+  - .sass-cache
+  - .codex
+
+# -----------
+# Theme metadata
+
+social_icons:
+  - Facebook
+  - Google Plus
+  - Instagram
+  - LinkedIn
+  - Pinterest
+  - Tumblr
+  - Twitter HawaiiCurrency
+  - YouTube
+  - RSS
+
+_comments:
+  map: Update the map location and display settings.
+  latitude: Coordinates for the center marker on the map.
+  longitude: Coordinates for the center marker on the map.
+  zoom: The zoom level for the map.
+  pricing_table: Update the information in the pricing tables.
+  highlight: Emphasis the text
+  color: The background colour used in the plan name and call to action.
+  new_window: Open link in new window

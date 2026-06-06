@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="referrer" content="strict-origin-when-cross-origin">
+		{% if page.robots %}
+			<meta name="robots" content="{{ page.robots }}">
+		{% endif %}
+
+		{% seo %}
+		{% feed_meta %}
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7MD8YP4DW"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-F7MD8YP4DW');
+		</script>
+		{% unless page.no_ads %}
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4379410432613892"
+     crossorigin="anonymous"></script>
+		{% endunless %}
+
+		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
+		<!--link rel="stylesheet" href="{{ site.baseurl }}/css/style.css"-->
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+
+		<meta name="coinzilla" content="71e59202d25266778c1f72ed09a431b3" />
+		
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.svg" alt="{{ site.title }}" style="width:25%; height:25%" /></a></div>
+				{% include navigation.html %}
+			</div>
+		</header>
+		{{ content }}
+		<footer>
+			<div class="container">
+				<div class="footer-columns">
+					{% for column in site.data.footer %}
+					<ul class="footer-links">
+						{% for link in column.links %}
+							<li><a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon }}-icon"{% endif %}-->
+								{% if link.social_icon %}
+									{% include social-icon.html icon=link.social_icon %}
+								{% endif %}
+								{{ link.name }}</a></li>
+						{% endfor %}
+					</ul>
+					{% endfor %}
+				</div>
+			</div>
+		</footer>
+		<script>
+			document.getElementById("open-nav").onclick = function () {
+				document.body.classList.toggle("nav-open");
+				return false;
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+
+# Generated Jekyll output and caches
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Local metadata-processing artifacts
+/.codex/
+.codex_batch_*.py
+metadata-report*
+media-shaper-*
+data/jobs/
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

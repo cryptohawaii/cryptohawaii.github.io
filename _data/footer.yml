@@ -1,0 +1,36 @@
+- links:
+  - name: Site Map
+    link: /sitemap.xml
+  - name: News
+    link: /updates/
+  - name: Getting Crypto
+    link: /purchase/
+  - name: Quick Facts
+    link: /education/
+  - name: About
+    link: /about/
+  - name: Contact
+    link: /contact/
+  - name: Privacy
+    link: /privacy/
+  - name: Terms
+    link: /terms/
+  - name: Disclaimer
+    link: /disclaimer/
+- links:
+#  - name: Facebook
+#    link: https://facebook.com/cloudcannon/
+#    new_window: true
+#    social_icon: Facebook
+#  - name: Twitter
+#    link: https://twitter.com/cloudcannon/
+#    social_icon: Twitter
+#    new_window: true
+#  - name: YouTube
+#    link: https://youtube.com/cloudcannon/
+#    social_icon: YouTube
+#    new_window: true
+#  - name: RSS
+#    link: /feed.xml
+#    social_icon: RSS
+#    new_window: false

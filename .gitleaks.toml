@@ -1,0 +1,27 @@
+title = "Crypto Hawaii secret scanning"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "media-shaper-credential"
+description = "Media Shaper credentials must never be committed"
+regex = '''(?i)(MEDIA_SHAPER_API_KEYS|X-API-Key|Authorization:\s*Bearer|service-client-key)'''
+keywords = ["MEDIA_SHAPER", "X-API-Key", "Authorization", "service-client-key"]
+
+[[rules]]
+id = "private-ip-endpoint"
+description = "Private network endpoints must remain outside the public repository"
+regex = '''(?i)(https?://)?(?:10\.\d{1,3}\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3})(?::\d+)?'''
+
+[allowlist]
+description = "Documentation placeholders"
+regexTarget = "match"
+regexes = [
+  '''SERVER_PI_IP''',
+  '''RASPBERRY_PI_IP'''
+]
+paths = [
+  '''^\.gitleaks\.toml$''',
+  '''^scripts/check-sensitive-content\.sh$'''
+]

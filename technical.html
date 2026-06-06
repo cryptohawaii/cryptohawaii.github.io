@@ -1,0 +1,37 @@
+---
+layout: default
+title: More Technical
+description: Explore technical deep dives into cryptocurrency, blockchain, and fintech/finance in Hawaii. Get insights on Bitcoin, Ethereum, and advanced crypto topics for developers, investors, and everyday people or kama'aina.
+
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+
+<section id="updates">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-12">
+        <div class="section-title">
+          <h2 style="color: aliceblue;"><span>{{ page.title }}</span></h2>
+        </div>
+        <div class="listrecent">
+          {% for post in site.posts %}
+            {% if post.categories contains "technical" %}
+              <div class="post-row">
+                <a href="{{ post.url }}" class="card">
+                  <div class="card-image">
+                    <img src="{{ post.cover }}" alt="{{ post.title }}">
+                  </div>
+                  <div class="card-content">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.description }}</p>
+                  </div>
+                </a>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
