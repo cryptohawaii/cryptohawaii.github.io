@@ -16,6 +16,7 @@ _site/
 
 # Local metadata-processing artifacts
 /.codex/
+AGENTS.md
 .codex_batch_*.py
 metadata-report*
 media-shaper-*
