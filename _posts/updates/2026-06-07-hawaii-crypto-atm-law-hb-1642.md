@@ -1,10 +1,11 @@
 ---
 layout: post
+cover: "../images/updates/2026-06-07/hawaii-crypto-atm-rules-cover.png"
 title: "Hawaii Crypto ATM Rules: What HB 1642 Means for Residents"
 date: 2026-06-07
 categories: updates
 author: HawaiiCurrency
-published: false
+published: true
 featured: false
 permalink: updates/hawaii-crypto-atm-law-hb-1642
 comments: true
@@ -57,13 +58,7 @@ The bill is aimed at kiosk operators. It does not make cryptocurrency illegal, p
 
 > **Status note:** Passing the Legislature is not the same as becoming law. This article describes HB 1642 CD1 as passed by lawmakers and sent to the governor. Check the [Hawaii Legislature's measure page](https://www.capitol.hawaii.gov/) for the latest action before relying on the proposed October 1, 2026 start date.
 
-<!--
-IMAGE PLACEHOLDER 1: HERO
-Filename: images/updates/2026-06-07/hawaii-crypto-atm-safety.webp
-Aspect ratio: 16:9
-Alt text: Hawaii resident pauses before using a cryptocurrency kiosk after receiving a suspicious payment request.
-Prompt: Editorial illustration of a generic cryptocurrency ATM inside a realistic Hawaii neighborhood retail store, an adult resident holding a phone and pausing before inserting cash after noticing a suspicious urgent payment request, another family member offering support, subtle island-local setting, consumer safety theme, natural daylight, realistic proportions, clear focal point, no company logos, no readable text, no floating crypto symbols, no beach or resort imagery, 16:9.
--->
+<img src="../images/updates/2026-06-07/hawaii-crypto-atm-safety.jpg" style="width: 100%;" alt="Hawaii resident pauses before using a cryptocurrency kiosk after receiving a suspicious payment request.">
 
 ## Why Crypto Kiosks Appear in Scams
 
@@ -110,13 +105,7 @@ A bank, police department, court, tax agency, or technology company will not ask
 
 Never share a seed phrase, private key, password, or authentication code. Anyone with those credentials may be able to take control of the assets in the wallet.
 
-<!--
-IMAGE PLACEHOLDER 2: SAFETY CHECKLIST
-Filename: images/updates/2026-06-07/crypto-kiosk-scam-checklist.webp
-Aspect ratio: 3:2
-Alt text: Visual checklist for stopping and verifying a suspicious crypto kiosk payment request.
-Prompt: Clean five-panel consumer protection infographic without words, showing an urgent phone request, a person stopping before a generic cryptocurrency kiosk, independently calling a trusted family member, verifying through an official contact, and reporting suspected fraud, Hawaii residents represented naturally, accessible high-contrast editorial style, no logos, no generated text, no investment charts, 3:2.
--->
+<img src="../images/updates/2026-06-07/crypto-kiosk-scam-checklist.jpg" style="width: 100%;" alt="Visual checklist for stopping and verifying a suspicious crypto kiosk payment request.">
 
 ## What Hawaii Residents Should Know About Crypto Services
 
