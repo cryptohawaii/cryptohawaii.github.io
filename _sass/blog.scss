@@ -88,6 +88,52 @@
 		.button {
 			margin: 30px 0 0 0;
 		}
+
+		table {
+			--post-table-border: #c9d1d9;
+			--post-table-header-bg: #f4f6f8;
+			--post-table-row-bg: #ffffff;
+			--post-table-row-alt-bg: #fafbfc;
+			--post-table-text: #1f2933;
+
+			border-collapse: collapse;
+			color: var(--post-table-text);
+			display: block;
+			margin: 1.75rem 0;
+			overflow-x: auto;
+			width: 100%;
+		}
+
+		th,
+		td {
+			border: 1px solid var(--post-table-border);
+			padding: 0.75rem;
+			text-align: left;
+			vertical-align: top;
+		}
+
+		th {
+			background: var(--post-table-header-bg);
+			font-weight: 700;
+		}
+
+		td {
+			background: var(--post-table-row-bg);
+		}
+
+		tr:nth-child(even) td {
+			background: var(--post-table-row-alt-bg);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			table {
+				--post-table-border: #4b5563;
+				--post-table-header-bg: #1f2937;
+				--post-table-row-bg: #111827;
+				--post-table-row-alt-bg: #172033;
+				--post-table-text: #e5e7eb;
+			}
+		}
 	}
 }
 
