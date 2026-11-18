@@ -2,36 +2,33 @@
 layout: default
 title: More Technical
 description: Explore technical deep dives into cryptocurrency, blockchain, and fintech/finance in Hawaii. Get insights on Bitcoin, Ethereum, and advanced crypto topics for developers, investors, and everyday people or kama'aina.
-
 ---
+<div class="page-wrap">
+	<div class="container">
+		<header class="page-header">
+			<span class="section-kicker">Pacific Broadsheet &middot; Technical Research</span>
+			<h1>{{ page.title }}</h1>
+			<p class="page-deck">{{ page.description }}</p>
+		</header>
 
-<link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
-
-<section id="updates">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-lg-12">
-        <div class="section-title">
-          <h2 style="color: aliceblue;"><span>{{ page.title }}</span></h2>
-        </div>
-        <div class="listrecent">
-          {% for post in site.posts %}
-            {% if post.categories contains "technical" %}
-              <div class="post-row">
-                <a href="{{ post.url }}" class="card">
-                  <div class="card-image">
-                    <img src="{{ post.cover }}" alt="{{ post.title }}">
-                  </div>
-                  <div class="card-content">
-                    <h2>{{ post.title }}</h2>
-                    <p>{{ post.description }}</p>
-                  </div>
-                </a>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+		<div class="dispatch-grid">
+			{% for post in site.posts %}
+				{% if post.categories contains "technical" %}
+					<article class="dispatch-card">
+						{% if post.cover %}
+						<a href="{{ site.baseurl }}{{ post.url }}" class="card-thumb">
+							<img src="{{ site.baseurl }}{{ post.cover }}" alt="{{ post.title }}" loading="lazy">
+						</a>
+						{% endif %}
+						<div class="byline-meta">
+							<span class="stamp-badge teal">Technical</span>
+							<span>{{ post.date | date: "%B %-d, %Y" }}</span>
+						</div>
+						<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+						<p>{{ post.description }}</p>
+					</article>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</div>

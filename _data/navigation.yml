@@ -6,6 +6,10 @@
   link: /technical/
   new_window: false
   highlight: true
+- name: Education
+  link: /education/
+  new_window: false
+  highlight: false
 #- name: Getting Crypto
 #  link: /purchase/
 #  new_window: true
@@ -20,6 +24,10 @@
 #  highlight: false
 - name: About
   link: /about/
+  new_window: false
+  highlight: false
+- name: Editorial Policy
+  link: /editorial-policy/
   new_window: false
   highlight: false
 - name: Contact

@@ -1,87 +1,132 @@
-<section class="hero">
-    <div class="text-container">
-        <h1 class="editable">Aloha! Digital Currency and Crypto Coins for Hawaii</h1>
-        <br>
-        <p class="subtext editable">Experiment or support by sending Bitcoin to address below</p>
-        <div>
-			<img src="{{ site.baseurl }}/images/btc_qr.png"
-			alt="Bitcoin donation QR code for Hawaii Digital Currency - Send BTC to support crypto education"
-			width="300"
-			height="300"
-			loading="lazy"
-			style="width: 25%; height: auto; max-width: 300px;" />
-		</div>
-    </div>
-</section>
-
-<div class="content">
-	<!-- Latest News Section -->
-	<section class="latest-posts">
-		<div class="container">
-			<h2 class="editable">Latest Articles on Cryptocurrency in Hawaii</h2>
-			<div class="listrecent">
-				{% for post in site.posts limit:3 %}
-				<article class="post-row" style="margin-bottom: 5px;">
-					<a href="{{ site.baseurl }}{{ post.url }}" class="card" style="display: flex; align-items: center;">
-						<div class="card-image" style="flex: 0 0 150px; margin-right: 20px;">
-							<img src="{{ site.baseurl }}{{ post.cover }}"
-							alt="{{ post.title }} - {{ post.description | strip_html | truncate: 80 }}"
-							width="600"
-							height="400"
-							loading="lazy"
-							style="width: 100%; height: auto;" />
+<div class="frontpage">
+	<div class="container">
+		<div class="broadsheet-2col">
+			<div class="editorial-main">
+				{% assign lead_post = site.posts | first %}
+				{% if lead_post %}
+				<article class="lead-story">
+					<span class="section-kicker">Front Page Dispatch &middot; Hawaiʻi Digital Currency</span>
+					<div class="lead-story-grid">
+						<div>
+							<div class="byline-meta">
+								{% for category in lead_post.categories %}
+									<span class="stamp-badge {% if category == 'technical' %}teal{% endif %}">{{ category | capitalize }}</span>
+								{% endfor %}
+								<span>{{ lead_post.date | date: "%B %-d, %Y" }}</span>
+							</div>
+							<h2><a href="{{ site.baseurl }}{{ lead_post.url }}">{{ lead_post.title }}</a></h2>
+							<p class="lead-deck">{{ lead_post.description }}</p>
+							<a href="{{ site.baseurl }}{{ lead_post.url }}" class="btn-broadsheet">Read Dispatch &rarr;</a>
 						</div>
-						<div class="card-content" style="flex: 1;">
-							<h3>{{ post.title }}</h3>
-							<p>{{ post.description }}</p>
-						</div>
-					</a>
+						{% if lead_post.cover %}
+						<a href="{{ site.baseurl }}{{ lead_post.url }}" class="woodblock-frame" aria-label="{{ lead_post.title }}">
+							<img src="{{ site.baseurl }}{{ lead_post.cover }}" alt="{{ lead_post.title }}" width="600" height="400" loading="eager">
+						</a>
+						{% endif %}
+					</div>
 				</article>
-				{% endfor %}
-			</div>
-			<div class="cta button">
-				<a href="{{ site.baseurl }}/updates/">Explore All Cryptocurrency Articles and Updates</a>
-			</div>
-		</div>
-	</section>
+				{% endif %}
 
-    <!-- What is Crypto Section -->
-    <section>
-		<div class="container flex">
-			<div class="text editable">
-				<h2><a href="{{ site.baseurl }}/education/" target="_blank">What Are Cryptocurrencies?</a></h2>
-				<p>Cryptocurrencies are digital, decentralized forms of money that use blockchain technology for secure transactions. Popular examples include Bitcoin (BTC), Ethereum (ETH), Solana (SOL), and Ripple (XRP). They solve the "double-spending" problem without needing a central authority, relying on mathematical consensus mechanisms like proof-of-work or proof-of-stake. As of 2026, cryptocurrencies continue to evolve, offering innovations in finance, NFTs, and decentralized apps (dApps).</p>
-				<p>Learn more about how cryptocurrencies work and their benefits for users in Hawaii and beyond.</p>
-			</div>
-			<div class="image">
-				<img src="{{ site.baseurl }}/images/crypto_hawaii.jpeg" alt="Cryptocurrencies in Hawaii - Blockchain Technology Overview" loading="lazy" />
-			</div>
-		</div>
-	</section>
+				<section aria-labelledby="latest-dispatches-heading">
+					<div class="section-head-rule">
+						<h2 id="latest-dispatches-heading">Latest Dispatches</h2>
+						<a href="{{ site.baseurl }}/updates/">All Updates &rarr;</a>
+					</div>
 
-	<section>
-		<div class="container flex">
-			<div class="text editable">
-				<h2><a href="{{ site.baseurl }}/purchase/" target="_blank">How to Buy Cryptocurrency in Hawaii</a></h2>
-				<p>As of July 1, 2024, cryptocurrency is fully legal to buy, sell, and trade in Hawaii. Virtual asset service providers no longer require a state-issued money transmitter license, making it easier for residents to access crypto platforms. This change followed the conclusion of the Digital Currency Innovation Lab (DCIL) pilot program, which ran from 2020 to 2022 and confirmed that such licenses are unnecessary for digital asset activities.</p>
-				<p>Hawaii residents can use popular exchanges like Coinbase, Binance.US, or Kraken to purchase crypto securely. Always prioritize licensed platforms and enable two-factor authentication for safety.</p>
+					<div class="dispatch-grid">
+						{% for post in site.posts offset:1 limit:4 %}
+						<article class="dispatch-card">
+							{% if post.cover %}
+							<a href="{{ site.baseurl }}{{ post.url }}" class="card-thumb">
+								<img src="{{ site.baseurl }}{{ post.cover }}" alt="{{ post.title }} - {{ post.description | strip_html | truncate: 80 }}" width="600" height="400" loading="lazy">
+							</a>
+							{% endif %}
+							<div class="byline-meta">
+								{% for category in post.categories %}
+									<span class="stamp-badge {% if category == 'technical' %}teal{% endif %}">{{ category | capitalize }}</span>
+								{% endfor %}
+								<span>{{ post.date | date: "%b %-d, %Y" }}</span>
+							</div>
+							<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+							<p>{{ post.description | truncate: 150 }}</p>
+						</article>
+						{% endfor %}
+					</div>
+				</section>
 			</div>
-			<div class="image">
-				<img src="{{ site.baseurl }}/images/diamond_head.jpeg" alt="Buying Cryptocurrency in Hawaii - Legal Guide 2026" loading="lazy" />
-			</div>
-		</div>
-	</section>
 
-	<section>
-		<div class="container flex">
-			<div class="text editable">
-				<h2><a href="{{ site.baseurl }}/contact/" target="_blank">Advancing Hawaii's Economy with Fintech and Cryptocurrency</a></h2>
-				<p>Cryptocurrency and digital assets are unlocking new opportunities in financial technology (fintech) for Hawaii. With updated regulations in 2024 allowing easier crypto operations, fintech innovations can boost economic growth, create jobs, and attract investment. Post-COVID recovery has highlighted the need for resilient financial systems, and blockchain technology offers solutions for secure remittances, tourism payments, and sustainable finance.</p>
-				<p>Discover how fintech is shaping Hawaii's future and how you can get involved.</p>
-			</div>
-			<div class="image">
-				<img src="{{ site.baseurl }}/images/waikiki_night.JPG" alt="Fintech and Cryptocurrency in Hawaii - Economic Growth 2026" loading="lazy" />
-			</div>
+			<aside class="editorial-rail" aria-label="Hawaiʻi Ledger &amp; Resident Guides">
+				<div class="rail-box shaded">
+					<span class="section-kicker">Statutory Ledger</span>
+					<h3>Hawaiʻi Regulatory Brief</h3>
+					<ul class="rail-list">
+						<li><strong>Post-DCIL Era (July 1, 2024):</strong> Virtual asset service providers no longer require a state money transmitter license to operate in Hawaiʻi, though federal FinCEN, SEC, and IRS rules still apply.</li>
+						<li><strong>Consumer &amp; Kiosk Safety:</strong> Always verify fees, withdrawal limits, and scam warnings before using local crypto kiosks or peer-to-peer transfers.</li>
+						<li><strong>Resident Guides:</strong> Start with <a href="{{ site.baseurl }}/purchase/">How to Buy Crypto in Hawaiʻi</a> or <a href="{{ site.baseurl }}/education/">Crypto Quick Facts</a>.</li>
+					</ul>
+				</div>
+
+				<div class="rail-box">
+					<span class="section-kicker">Sections</span>
+					<h3>Archive &amp; Research</h3>
+					<ul class="rail-list">
+						<li><a href="{{ site.baseurl }}/updates/">Updates &amp; News</a> &mdash; Hawaiʻi policy, market developments, and consumer alerts.</li>
+						<li><a href="{{ site.baseurl }}/technical/">More Technical</a> &mdash; Deep dives on Bitcoin treasuries, protocols, and market structure.</li>
+						<li><a href="{{ site.baseurl }}/about/">About This Broadsheet</a> &mdash; Editorial mission and independence.</li>
+					</ul>
+				</div>
+
+				<div class="rail-box shaded">
+					<span class="section-kicker">Support Independent Reporting</span>
+					<h3>Aloha! Support via Bitcoin</h3>
+					<p>Experiment or support Hawaii Digital Currency by sending Bitcoin to the address below.</p>
+					<div class="woodblock-frame" style="max-width: 170px; margin: 10px auto 0;">
+						<img src="{{ site.baseurl }}/images/btc_qr.png" alt="Bitcoin donation QR code for Hawaii Digital Currency - Send BTC to support crypto education" width="300" height="300" loading="lazy">
+					</div>
+				</div>
+			</aside>
 		</div>
-	</section>
+
+		<section class="explainer-band" aria-label="Hawaiʻi Crypto Explainers">
+			<div class="section-head-rule">
+				<h2>Hawaiʻi Digital Asset Explainers</h2>
+				<a href="{{ site.baseurl }}/education/">Quick Facts &rarr;</a>
+			</div>
+
+			<div class="explainer-grid">
+				<article class="explainer-card">
+					<div class="woodblock-frame">
+						<img src="{{ site.baseurl }}/images/crypto_hawaii_woodblock.jpg" alt="Cryptocurrencies in Hawaii - Hokusai-inspired woodblock print of digital coins and sprout" loading="lazy">
+					</div>
+					<span class="section-kicker">Foundations &middot; Education</span>
+					<h3><a href="{{ site.baseurl }}/education/">What Are Cryptocurrencies?</a></h3>
+					<p>Cryptocurrencies are digital, decentralized forms of money secured by cryptographic hashing and public blockchains rather than a central bank. Major networks—including Bitcoin (BTC), Ethereum (ETH), Solana (SOL), and XRP—use Proof-of-Work or Proof-of-Stake consensus to prevent double-spending and settle transactions globally in minutes.</p>
+					<p>Explore how public ledgers, smart contracts, decentralized apps (dApps), and IPFS storage work in plain language for Hawaiʻi residents.</p>
+					<a href="{{ site.baseurl }}/education/" class="btn-broadsheet" style="align-self: flex-start; margin-top: auto;">Read the Education Guide &rarr;</a>
+				</article>
+
+				<article class="explainer-card">
+					<div class="woodblock-frame">
+						<img src="{{ site.baseurl }}/images/diamond_head_woodblock.jpg" alt="Buying Cryptocurrency in Hawaii - Hokusai-inspired woodblock print of Diamond Head" loading="lazy">
+					</div>
+					<span class="section-kicker">Post-DCIL Access &middot; Resident Guide</span>
+					<h3><a href="{{ site.baseurl }}/purchase/">How to Buy Cryptocurrency in Hawaii</a></h3>
+					<p>Since July 1, 2024—following the conclusion of Hawaiʻi's Digital Currency Innovation Lab (DCIL)—virtual currency companies no longer require a state-issued money transmitter license, opening access to major U.S.-regulated exchanges while federal FinCEN and tax rules remain in effect.</p>
+					<p>Compare platforms accessible in the islands, understand ACH vs. kiosk fees, and follow our security checklist before making a purchase.</p>
+					<a href="{{ site.baseurl }}/purchase/" class="btn-broadsheet" style="align-self: flex-start; margin-top: auto;">View the Buying Guide &rarr;</a>
+				</article>
+
+				<article class="explainer-card">
+					<div class="woodblock-frame">
+						<img src="{{ site.baseurl }}/images/waikiki_night_woodblock.jpg" alt="Fintech and Cryptocurrency in Hawaii - Nocturnal woodblock print of Waikiki skyline" loading="lazy">
+					</div>
+					<span class="section-kicker">Island Economy &middot; Community</span>
+					<h3><a href="{{ site.baseurl }}/contact/">Advancing Hawaii's Economy with Fintech</a></h3>
+					<p>Clearer digital-asset rules and modern payment rails give Hawaiʻi new tools to lower cross-Pacific remittance costs, streamline international visitor payments, and retain local engineering and data-science talent across Oʻahu, Maui, Kauaʻi, and Hawaiʻi Island.</p>
+					<p>Learn how fintech is shaping island economic resilience and connect with our team on research, education, or local initiatives.</p>
+					<a href="{{ site.baseurl }}/contact/" class="btn-broadsheet" style="align-self: flex-start; margin-top: auto;">Explore &amp; Connect &rarr;</a>
+				</article>
+			</div>
+		</section>
+	</div>
 </div>

@@ -1,7 +1,7 @@
 ---
 layout: null
 sitemap:
-exclude: 'yes'
+  exclude: 'yes'
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -16,21 +16,23 @@ exclude: 'yes'
         {% else %}
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         {% endif %}
-        {% if post.sitemap.changefreq %}
-        <changefreq>{{ post.sitemap.changefreq }}</changefreq>
-        {% else %}
-        <changefreq>monthly</changefreq>
-        {% endif %}
-        {% if post.sitemap.priority %}
-        <priority>{{ post.sitemap.priority }}</priority>
-        {% else %}
-        <priority>0.5</priority>
-        {% endif %}
+        <changefreq>{{ post.sitemap.changefreq | default: "monthly" }}</changefreq>
+        <priority>{{ post.sitemap.priority | default: "0.7" }}</priority>
     </url>
     {% endunless %}
     {% endfor %}
     {% for page in site.pages %}
-    {% unless page.sitemap.exclude == "yes" or page.name == "feed.xml" %}
+    {% assign exclude_page = false %}
+    {% if page.sitemap.exclude == "yes" or page.robots contains "noindex" %}
+        {% assign exclude_page = true %}
+    {% endif %}
+    {% if page.name == "feed.xml" or page.name == "404.html" or page.name == "robots.txt" or page.name == "search.json" or page.name == "ads.txt" or page.name == "llms.txt" or page.name == "CNAME" %}
+        {% assign exclude_page = true %}
+    {% endif %}
+    {% if page.url contains "/css/" or page.url contains "/assets/" %}
+        {% assign exclude_page = true %}
+    {% endif %}
+    {% unless exclude_page %}
     <url>
         <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
         {% if page.sitemap.lastmod %}
@@ -40,16 +42,8 @@ exclude: 'yes'
         {% else %}
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         {% endif %}
-        {% if page.sitemap.changefreq %}
-        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-        {% else %}
-        <changefreq>monthly</changefreq>
-        {% endif %}
-        {% if page.sitemap.priority %}
-        <priority>{{ page.sitemap.priority }}</priority>
-        {% else %}
-        <priority>0.3</priority>
-        {% endif %}
+        <changefreq>{{ page.sitemap.changefreq | default: "monthly" }}</changefreq>
+        <priority>{{ page.sitemap.priority | default: "0.5" }}</priority>
     </url>
     {% endunless %}
     {% endfor %}

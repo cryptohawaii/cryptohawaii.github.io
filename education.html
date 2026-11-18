@@ -1,64 +1,129 @@
 ---
 title: Education
 heading: Learn about Blockchain, Digital, and Crypto Currency
-description: Blockchain technology and crypto currencies have the potential to reshape and improve Hawaii's economy
-
+description: Practical explainers on cryptographic hashing, blockchains, Bitcoin, smart contracts, decentralized storage, and how digital assets fit into Hawaii's economy.
 
 faq:
-  - question: What are some important topics?
-    answer: Important differences between centralized and decentralized
-  - question: Do I need to understand the cryptographic has or blockchain to use digital currencies?
-    answer: No, cryptocurrency use does not require this knowledege but it is handy to know
+  - question: What is the core difference between centralized finance and decentralized blockchain networks?
+    answer: Centralized systems (such as banks, Venmo, or payment processors) rely on a single company or institution to maintain the ledger, approve transactions, and hold custody of funds. Decentralized blockchains distribute the ledger across thousands of independent computers (nodes) worldwide that verify transactions using open cryptographic rules rather than a middleman.
+  - question: Do I need to understand cryptographic hash functions to use digital currencies in Hawaii?
+    answer: No—just as you do not need to understand TCP/IP packet routing to send an email, everyday users can send, receive, or hold digital assets through standard wallet or exchange apps. However, understanding hashes, block confirmations, and private keys helps you spot scams, verify transactions on a block explorer, and protect your funds.
+  - question: Why can Bitcoin and other cryptocurrencies be bought in tiny fractions?
+    answer: Unlike a U.S. dollar (which divides down to two decimal places, or $0.01), one Bitcoin is divisible to eight decimal places—down to 0.00000001 BTC, known as one "satoshi." That means Hawaii residents do not need to buy a whole coin; you can purchase or send $10 or $25 worth just as easily.
+  - question: What is the difference between Proof-of-Work (PoW) and Proof-of-Stake (PoS)?
+    answer: Proof-of-Work (used by Bitcoin) secures the ledger by requiring miners to expend computational energy solving cryptographic puzzles to propose a new block. Proof-of-Stake (used by Ethereum and Solana) secures the ledger through validators who lock up ("stake") native tokens as collateral that can be penalized if they validate fraudulent transactions.
+  - question: Are blockchain transactions anonymous?
+    answer: Most major blockchains—including Bitcoin and Ethereum—are pseudonymous, not anonymous. Every wallet address, transaction amount, and timestamp is permanently visible on a public ledger. Once an address is linked to your identity at a regulated exchange, anyone can trace transfers moving to and from that address.
+  - question: What happens if I send crypto to the wrong address or lose my recovery phrase?
+    answer: Blockchain transactions are immutable and final once confirmed; there is no bank helpdesk to reverse a mistaken transfer. Likewise, if you hold crypto in a self-custody wallet and lose your 12- or 24-word seed phrase, the funds cannot be recovered. Always test with a small amount first and store backups offline.
 ---
-<h3>Crypto</h3>
-<img src="{{ site.baseurl }}/images/hash_func.jpeg" alt="cryptographic hash function" style="width:50%;margin-left: auto;margin-right: auto;display: block;" />
+
+<figure class="woodblock-frame" style="max-width: 780px; margin: 0 auto 28px;">
+	<img src="{{ site.baseurl }}/images/crypto_hawaii_woodblock.jpg" alt="Hokusai-inspired woodblock illustration of cryptocurrency coins and growing sprout in Hawaii" loading="eager" style="margin: 0; border: 0; padding: 0;" />
+</figure>
+
+<blockquote>
+	<strong>Quick Summary (TLDR) for Hawaiʻi Readers:</strong> A cryptocurrency is digital money secured by mathematics rather than a single central authority. Every transfer is grouped into timestamped blocks and linked together using cryptographic hashes to form an unalterable public ledger—a <em>blockchain</em>. For island residents and small businesses, understanding how hashes, wallets, consensus rules, and decentralized storage work is the best defense against fraud and the foundation for using modern financial technology safely.
+</blockquote>
+
+<h2>1. The "Crypto" in Cryptocurrency: Cryptographic Hashing</h2>
+<img src="{{ site.baseurl }}/images/hash_func_woodblock.jpg" alt="Hokusai woodblock diagram of a cryptographic hash function converting Plain Text into Hashed Text" style="width:72%; max-width: 620px; margin-left: auto; margin-right: auto; display: block;" />
 <p>
-	The word "crypto" in crypto currency refers to the cryptographic hashing that is involved in the proof of work function
-	used to verify transactions on the public ledger.  Each cryptocurrency has their own cryptographic hashing and ledger
-	scheme but at the heart of it is a <a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function" target="_blank">hash function</a>.
-	All transactions are grouped together by time and hashed together to create what is called a block.
+	The word <strong>"crypto"</strong> in cryptocurrency comes from <em>cryptography</em>—specifically the mathematical <strong><a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function" target="_blank" rel="noopener noreferrer">cryptographic hash function</a></strong> and public-key digital signatures used to verify every transaction on a public ledger.
 </p>
-<h3>Blockchain</h3>
-<img src="{{ site.baseurl }}/images/blockchain.png" alt="blockchain education"  style="width:70%;margin-left: auto;margin-right: auto;display: block;"/>
 <p>
-	When all transactions for a given time period, about every 10 minutes for bitcoin, are hashed together they create a "block".
-	These blocks contain the hash of a previous block, all the transactions for that timeframe and the current hash of the
-	block.  A hash is a series of bits, often represented as letters and numbers, that result from a hash function. A hash
-	function creates a unique hash for any given input.  Having the hash from the previous block contained in the current block
-	creates the concept of a chain which links every block to the previous block before it; hence chain of blocks or blockchain
+	A cryptographic hash function (such as Bitcoin's <code>SHA-256</code>) takes any input—whether a single word, a payment record, or an entire encyclopedia—and converts it into a fixed-length string of characters called a <strong>digest</strong> or <strong>hash</strong>. Even changing a single comma in the input produces a completely different hash, and it is mathematically infeasible to work backward from the hash to guess the original input.
 </p>
-<h3>Bitcoin</h3>
-<img src="{{ site.baseurl }}/images/bitcoin_logo.png" alt="bitcoin logo" style="width:30%;margin-left: auto;margin-right: auto;display: block;" />
+<ul>
+	<li><strong>Tamper Evidence:</strong> If anyone tries to alter an old transaction by even a single cent, the resulting hash changes immediately, alerting every computer on the network that the data was modified.</li>
+	<li><strong>Public &amp; Private Keys:</strong> Alongside hashing, wallets use asymmetric cryptography. Your <em>public address</em> works like a mailbox number others can send funds to, while your <em>private key</em> acts as the cryptographic signature proving you—and only you—authorized an outgoing transfer.</li>
+</ul>
+
+<h2>2. How a Blockchain Ledger Works</h2>
+<img src="{{ site.baseurl }}/images/blockchain_woodblock.jpg" alt="Hokusai woodblock diagram showing how Block 1, Block 2, and Block 3 are linked by cryptographic hashes" style="width:78%; max-width: 680px; margin-left: auto; margin-right: auto; display: block;" />
 <p>
-	Bitcoin is a single unit of a digital currency.  Bitcoin was the first example of a cryptocurrency and blockchain implementation.
-	Bitcoin has a deflationary model in that the number of bitcoins in circulation is finite.  A unique and advantageous
-	quality of bitcoin and digital currency that sets it apart from fiat currencies like the dollar is that these cryptocurrencies
-	can be divided into fractional amounts where as the smallest dollar value is a penny.
+	In traditional banking, a single financial institution keeps a private database of account balances. In a decentralized network, thousands of independent computers (called <strong>nodes</strong>) maintain identical copies of the same ledger.
 </p>
-<h3>Inter Planetary File System</h3>
-<img src="{{ site.baseurl }}/images/ipfs.png" alt="interplanetary file system" style="width:50%;margin-left: auto;margin-right: auto;display: block;" />
 <p>
-	Inter Planetary File System (IPFS) is a concept that is based off of blockchain technology. The idea is that data can be stored
-	on the blockchain and distributed for the benefit of robustness and accessibility.  The blockchain is immutable which
-	means that it cannot be changed.  What is written to blockchain remains on the blockchain.  Thus (IPFS) utilizes this
-	idea to create persistent storage that can be accessed at anytime.  This is advantageous when compared to cloud services
-	such as Dropbox and Google Drive because if any of these service providers servers are compromised, the data will be loss.  Yes,
-	they implement redundancy but with IPFS every node participating in the network contains a copy of the data and can
-	be recovered. An attack or disaster would have to take out all nodes for all data to be loss, which is a low probability.
-	Many decentralized applications are beginning to use IPFS and IPFS like storage schemes to house their data.
+	When transactions are broadcast to the network over a given window (roughly every 10 minutes on Bitcoin, or seconds on networks like Ethereum and Solana), they are grouped together and hashed into a <strong>block</strong>. Each new block contains three critical pieces of data:
 </p>
-<h3>DAPPS</h3>
+<ol>
+	<li><strong>The Verified Transactions:</strong> All valid transfers included in that timeframe.</li>
+	<li><strong>The Previous Block's Hash:</strong> The unique cryptographic fingerprint of the block that came immediately before it.</li>
+	<li><strong>The Current Block's Hash &amp; Timestamp:</strong> The new fingerprint sealing the current block.</li>
+</ol>
 <p>
-	Decentralized applications or DAPPS are applications that run on the blockchain in a decentralized fashion.
+	Because every block embeds the hash of the previous block, rewriting history in Block 100 would invalidate the hash of Block 101, Block 102, and every block after it. This cryptographic link forms an append-only <strong>chain of blocks—a blockchain</strong>—solving the classic "double-spending" problem without requiring a central clearinghouse.
 </p>
-<br>
-<br>
+
+<h2>3. Bitcoin: Digital Scarcity &amp; Fractional Value</h2>
+<img src="{{ site.baseurl }}/images/bitcoin_logo_woodblock.jpg" alt="Hokusai woodblock illustration of the Bitcoin emblem surrounded by ocean waves" style="width:38%; max-width: 300px; margin-left: auto; margin-right: auto; display: block;" />
+<p>
+	Launched in January 2009 following the release of Satoshi Nakamoto's whitepaper, <strong>Bitcoin (BTC)</strong> was the first working implementation of a decentralized cryptocurrency and Proof-of-Work blockchain.
+</p>
+<p>
+	Unlike fiat currencies (such as the U.S. dollar), whose supply is managed by central banks, Bitcoin operates on a fixed, programmatic issuance schedule capped at <strong>21 million coins</strong>. Roughly every four years, the new supply paid to miners per block is cut in half (an event known as the "halving").
+</p>
+<p>
+	A practical feature that sets Bitcoin apart from physical cash is its <strong>divisibility</strong>. While the smallest physical unit of the U.S. dollar is a penny ($0.01), a single Bitcoin can be divided into <strong>100,000,000 smaller units called satoshis (sats)</strong>. Whether Bitcoin trades at $10,000 or $100,000, a Hawaiʻi resident can buy, hold, or send $5 worth of BTC just as easily as a large institution moves millions.
+</p>
+
+<h2>4. Beyond Bitcoin: Smart Contracts, Stablecoins &amp; dApps</h2>
+<p>
+	While Bitcoin was designed primarily as decentralized sound money and a settlement layer, subsequent blockchains introduced programmable <strong>smart contracts</strong>—self-executing code stored directly on the blockchain that runs automatically when predefined conditions are met.
+</p>
+<table>
+	<thead>
+		<tr>
+			<th>Category</th>
+			<th>Examples</th>
+			<th>Primary Purpose &amp; Hawaiʻi Relevance</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>Store of Value / Monetary Network</strong></td>
+			<td>Bitcoin (BTC), Litecoin (LTC)</td>
+			<td>Peer-to-peer transfers, long-term treasury reserves, and censorship-resistant settlement without intermediaries.</td>
+		</tr>
+		<tr>
+			<td><strong>Smart-Contract Platforms</strong></td>
+			<td>Ethereum (ETH), Solana (SOL)</td>
+			<td>Programmable networks hosting decentralized applications (dApps), tokenized assets, and automated financial protocols.</td>
+		</tr>
+		<tr>
+			<td><strong>Cross-Border Payment Rails</strong></td>
+			<td>XRP, Stellar (XLM)</td>
+			<td>Fast, low-fee bridge settlement aimed at international remittances across the Asia-Pacific region.</td>
+		</tr>
+		<tr>
+			<td><strong>Fiat-Backed Stablecoins</strong></td>
+			<td>USDC, USDT, PYUSD</td>
+			<td>Digital tokens designed to track $1.00 USD using cash and U.S. Treasury reserves—often used for payments and remittances without crypto price volatility.</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<strong>Decentralized Applications (dApps)</strong> are software applications whose backend logic runs on a smart-contract blockchain rather than a single company's server. Once deployed, a dApp operates according to its published code, allowing users to trade, lend, verify credentials, or transfer digital goods directly from their own wallets.
+</p>
+
+<h2>5. InterPlanetary File System (IPFS) &amp; Resilient Data</h2>
+<img src="{{ site.baseurl }}/images/ipfs_woodblock.jpg" alt="Hokusai woodblock illustration of the InterPlanetary File System (IPFS) logo" style="width:60%; max-width: 500px; margin-left: auto; margin-right: auto; display: block;" />
+<p>
+	Because storing large images, documents, or web applications directly on a financial blockchain is expensive, decentralized networks often pair blockchains with the <strong>InterPlanetary File System (IPFS)</strong>.
+</p>
+<p>
+	Traditional cloud storage (such as central web servers) uses <em>location-based addressing</em>: you fetch a file by asking a specific server at a specific URL. If that server goes offline, gets hacked, or loses Submarine cable connectivity, the file becomes unreachable.
+</p>
+<p>
+	IPFS instead uses <strong>content-based addressing</strong>: every file is identified by its unique cryptographic hash (Content Identifier, or <code>CID</code>). Multiple participating nodes across the network can host and serve that exact file, and your computer verifies the hash automatically. For geographically isolated island communities like Hawaiʻi, distributed storage and verifiable ledgers offer a model for higher data resilience and censorship-resistant archiving.
+</p>
 
 {% if page.faq %}
-	<h2>Purchasing FAQ</h2>
+	<h2>Cryptocurrency &amp; Blockchain FAQ</h2>
 	<dl class="faq">
 		{% for item in page.faq %}
-			<div>
+			<div class="faq-item">
 				<dt>{{ item.question }}</dt>
 				<dd>{{ item.answer }}</dd>
 			</div>

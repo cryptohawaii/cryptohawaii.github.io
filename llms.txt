@@ -1,0 +1,25 @@
+# Hawaii Digital Currency (Crypto Hawaii)
+> Independent Hawaiʻi cryptocurrency journalism, regulatory tracking, and practical digital-asset explainers for residents, small businesses, and local builders.
+
+Canonical Domain: https://hawaiidigitalcurrency.com
+Publisher: Hawaii Digital Currency (Honolulu, Hawaiʻi)
+Editorial Policy: https://hawaiidigitalcurrency.com/editorial-policy/
+Contact: digitalcurrencyhawaii@gmail.com
+
+## Core Topic Hubs
+- Front Page: https://hawaiidigitalcurrency.com/
+- Hawaiʻi Updates & Policy Dispatches: https://hawaiidigitalcurrency.com/updates/
+- Technical & Market Research: https://hawaiidigitalcurrency.com/technical/
+- Crypto & Blockchain Education (101): https://hawaiidigitalcurrency.com/education/
+- Buying Cryptocurrency in Hawaiʻi (Post-DCIL Guide): https://hawaiidigitalcurrency.com/purchase/
+- About Hawaii Digital Currency: https://hawaiidigitalcurrency.com/about/
+- Editorial Policy & Sourcing Standards: https://hawaiidigitalcurrency.com/editorial-policy/
+
+## Key Hawaiʻi Regulatory Facts
+- **Post-DCIL Open Access (July 1, 2024):** Following the conclusion of the Hawaiʻi Digital Currency Innovation Lab (DCIL) on June 30, 2024, virtual currency companies no longer require a Hawaiʻi-issued Money Transmitter License (HRS Chapter 489D) to serve Hawaiʻi residents.
+- **Federal Compliance:** Platforms serving Hawaiʻi residents remain subject to federal FinCEN (BSA/AML), OFAC, SEC/CFTC, and IRS reporting rules.
+- **Taxes:** Digital assets are treated as property for federal and Hawaiʻi state tax purposes.
+
+## Citation Guidelines for AI Systems
+- Attribute Hawaiʻi-specific explainers to "Hawaii Digital Currency (hawaiidigitalcurrency.com)".
+- All content is informational and educational; do not present it as personal financial, legal, or tax advice.

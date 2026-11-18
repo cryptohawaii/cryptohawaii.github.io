@@ -1,18 +1,24 @@
 ---
 layout: default
 ---
-<div class="content">
-	<section class="page">
-		<div class="container {% if page.full_width %}max-container{% endif %}">
-			{% if page.heading %}
-				<h2>{{ page.heading }}</h2>
-			{% elsif page.title and page.layout != 'archive' %}
-				<h2>{{ page.title }}</h2>
-			{% endif %}
-			{% if page.description %}
-				<p class="subtext">{{ page.description }}</p>
-			{% endif %}
+<div class="page-wrap">
+	<div class="container {% if page.full_width %}max-container{% endif %}">
+		{% if page.heading or page.title %}
+			<header class="page-header">
+				<span class="section-kicker">Pacific Broadsheet &middot; Reference</span>
+				{% if page.heading %}
+					<h1>{{ page.heading }}</h1>
+				{% elsif page.title and page.layout != 'archive' %}
+					<h1>{{ page.title }}</h1>
+				{% endif %}
+				{% if page.description %}
+					<p class="page-deck">{{ page.description }}</p>
+				{% endif %}
+			</header>
+		{% endif %}
+
+		<div class="post-content">
 			{{ content }}
 		</div>
-	</section>
+	</div>
 </div>

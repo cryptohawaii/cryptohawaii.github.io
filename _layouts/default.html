@@ -1,16 +1,86 @@
 <!doctype html>
-
-<html lang="en">
+<html lang="en" data-theme="light">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="referrer" content="strict-origin-when-cross-origin">
 		{% if page.robots %}
 			<meta name="robots" content="{{ page.robots }}">
+		{% else %}
+			<meta name="robots" content="max-image-preview:large">
 		{% endif %}
 
 		{% seo %}
+		{% if page.cover and page.image == nil %}
+			{% assign cover_url = page.cover | prepend: site.baseurl | prepend: site.url %}
+			<meta property="og:image" content="{{ cover_url }}">
+			<meta name="twitter:card" content="summary_large_image">
+			<meta name="twitter:image" content="{{ cover_url }}">
+		{% endif %}
 		{% feed_meta %}
+
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "EducationalOrganization",
+					"@id": "{{ site.url }}/#organization",
+					"name": "Hawaii Digital Currency",
+					"alternateName": ["Crypto Hawaii", "Hawaii Crypto Currency"],
+					"url": "{{ site.url }}/",
+					"logo": {
+						"@type": "ImageObject",
+						"url": "{{ site.url }}/apple-touch-icon.png",
+						"width": 180,
+						"height": 180
+					},
+					"areaServed": {
+						"@type": "AdministrativeArea",
+						"name": "Hawaii",
+						"sameAs": "https://www.wikidata.org/wiki/Q782"
+					},
+					"publishingPrinciples": "{{ site.url }}/editorial-policy/",
+					"sameAs": ["https://x.com/HawaiiCurrency"]
+				},
+				{
+					"@type": "WebSite",
+					"@id": "{{ site.url }}/#website",
+					"url": "{{ site.url }}/",
+					"name": "Hawaii Digital Currency",
+					"publisher": { "@id": "{{ site.url }}/#organization" }
+				}{% if page.layout == "post" %},
+				{
+					"@type": "Article",
+					"@id": "{{ site.url }}{{ page.url }}#article",
+					"headline": {{ page.title | jsonify }},
+					"description": {{ page.description | strip_html | jsonify }},
+					"datePublished": "{{ page.date | date_to_xmlschema }}",
+					"dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+					{% if page.cover %}"image": ["{{ site.url }}{{ site.baseurl }}{{ page.cover }}"],{% endif %}
+					"author": { "@id": "{{ site.url }}/#organization" },
+					"publisher": { "@id": "{{ site.url }}/#organization" },
+					"mainEntityOfPage": "{{ site.url }}{{ page.url }}"
+				}{% endif %}{% if page.faq %},
+				{
+					"@type": "FAQPage",
+					"@id": "{{ site.url }}{{ page.url }}#faq",
+					"mainEntity": [
+						{% for item in page.faq %}
+						{
+							"@type": "Question",
+							"name": {{ item.question | jsonify }},
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": {{ item.answer | jsonify }}
+							}
+						}{% unless forloop.last %},{% endunless %}
+						{% endfor %}
+					]
+				}{% endif %}
+			]
+		}
+		</script>
 
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7MD8YP4DW"></script>
@@ -26,41 +96,120 @@
      crossorigin="anonymous"></script>
 		{% endunless %}
 
-		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
-		<!--link rel="stylesheet" href="{{ site.baseurl }}/css/style.css"-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="{{ site.baseurl }}/css/broadsheet.css">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
-
+		<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
+		<script>
+			(function () {
+				try {
+					var saved = localStorage.getItem('hc-theme');
+					if (saved === 'dark' || saved === 'light') {
+						document.documentElement.setAttribute('data-theme', saved);
+					}
+				} catch (e) {}
+			})();
+		</script>
 	</head>
 	<body>
-		<header>
+		<div id="reading-progress" aria-hidden="true"></div>
+
+		<div class="statute-bar">
+			<div class="container statute-inner">
+				<span class="statute-dateline">Honolulu, Hawaiʻi &middot; Pacific Broadsheet Edition</span>
+				<div class="statute-items">
+					<a class="statute-pill" href="{{ site.baseurl }}/purchase/"><span class="dot ok"></span>DCIL Sunset (July 2024)</a>
+					<a class="statute-pill" href="{{ site.baseurl }}/updates/"><span class="dot warn"></span>Hawaiʻi Policy &amp; Kiosk Safety</a>
+					<a class="statute-pill" href="{{ site.baseurl }}/education/"><span class="dot"></span>Resident Explainers</a>
+				</div>
+			</div>
+		</div>
+
+		<header class="masthead">
 			<div class="container">
-				<div class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.svg" alt="{{ site.title }}" style="width:25%; height:25%" /></a></div>
-				{% include navigation.html %}
+				<div class="masthead-meta">
+					<span>Vol. III &middot; Pacific Digital Ledger</span>
+					<span>{{ "now" | date: "%A, %B %-d, %Y" }}</span>
+					<span>Independent Hawaiʻi Reporting</span>
+				</div>
+				<div class="masthead-brand">
+					<a href="{{ site.baseurl }}/" class="brand-link">
+						<span class="brand-seal">Aloha &middot; Civic Ledger</span>
+						<span class="brand-wordmark">Hawaii Digital Currency</span>
+						<span class="brand-sub">Cryptocurrency, Regulation &amp; Financial Technology in the Islands</span>
+					</a>
+				</div>
 			</div>
 		</header>
-		{{ content }}
-		<footer>
+
+		{% include navigation.html %}
+
+		<main>
+			{{ content }}
+		</main>
+
+		<footer class="broadsheet-footer">
 			<div class="container">
-				<div class="footer-columns">
-					{% for column in site.data.footer %}
-					<ul class="footer-links">
-						{% for link in column.links %}
-							<li><a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon }}-icon"{% endif %}-->
-								{% if link.social_icon %}
-									{% include social-icon.html icon=link.social_icon %}
-								{% endif %}
-								{{ link.name }}</a></li>
+				<div class="footer-grid">
+					<div class="footer-colophon">
+						<h4>Hawaii Digital Currency</h4>
+						<p>Independent Hawaiʻi cryptocurrency journalism, regulatory tracking, and practical digital-asset explainers for kamaʻāina, small businesses, and local builders.</p>
+					</div>
+					<div>
+						{% for column in site.data.footer %}
+						<ul class="footer-links">
+							{% for link in column.links %}
+								<li>
+									<a {% if link.new_window %}target="_blank" rel="noopener noreferrer"{% endif %} href="{% include relative-src.html src=link.link %}">{{ link.name }}</a>
+								</li>
+							{% endfor %}
+						</ul>
 						{% endfor %}
-					</ul>
-					{% endfor %}
+					</div>
+				</div>
+				<div class="footer-disclaimer">
+					&copy; {{ "now" | date: "%Y" }} Hawaii Digital Currency (hawaiidigitalcurrency.com). Educational &amp; informational journalism only &mdash; not financial, legal, tax, or investment advice.
 				</div>
 			</div>
 		</footer>
+
 		<script>
-			document.getElementById("open-nav").onclick = function () {
-				document.body.classList.toggle("nav-open");
-				return false;
-			};
+			(function () {
+				var navBtn = document.getElementById("open-nav");
+				if (navBtn) {
+					navBtn.addEventListener("click", function (e) {
+						e.preventDefault();
+						document.body.classList.toggle("nav-open");
+					});
+				}
+
+				var themeBtn = document.getElementById("theme-toggle");
+				if (themeBtn) {
+					var updateLabel = function () {
+						var current = document.documentElement.getAttribute("data-theme") || "light";
+						themeBtn.textContent = current === "dark" ? "Newsprint" : "Night Ink";
+					};
+					updateLabel();
+					themeBtn.addEventListener("click", function () {
+						var current = document.documentElement.getAttribute("data-theme") || "light";
+						var next = current === "dark" ? "light" : "dark";
+						document.documentElement.setAttribute("data-theme", next);
+						try { localStorage.setItem("hc-theme", next); } catch (e) {}
+						updateLabel();
+					});
+				}
+
+				var bar = document.getElementById("reading-progress");
+				if (bar) {
+					window.addEventListener("scroll", function () {
+						var doc = document.documentElement;
+						var max = doc.scrollHeight - doc.clientHeight;
+						bar.style.width = max > 0 ? Math.min(100, (window.scrollY / max) * 100) + "%" : "0%";
+					}, { passive: true });
+				}
+			})();
 		</script>
 	</body>
 </html>
