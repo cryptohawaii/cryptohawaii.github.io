@@ -18,6 +18,8 @@
 			<meta name="twitter:image" content="{{ cover_url }}">
 		{% endif %}
 		{% feed_meta %}
+		<link rel="describedby" type="text/plain" href="{{ '/llms.txt' | relative_url }}">
+		{% if page.ai_markdown %}<link rel="alternate" type="text/markdown" href="{{ page.ai_markdown | relative_url }}">{% endif %}
 
 		<script type="application/ld+json">
 		{

@@ -81,7 +81,10 @@ plugins:
 
 exclude:
   - AGENTS.md
+  - AI-DISCOVERY.md
   - build.sh
+  - test
+  - scripts
   - Gemfile
   - Gemfile.lock
   - old_Gemfile

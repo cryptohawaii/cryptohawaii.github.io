@@ -1,0 +1,11 @@
+# AI-readable site output
+
+A normal Jekyll build produces `/llms.txt` and Markdown copies of eligible posts and selected informational pages. Each copy links to the original HTML as the preferred citation and retains rendered content, source links, author and publication date when available. HTML pages link to their Markdown alternate. The files are generated in `_site`; do not edit them there.
+
+Posts are included automatically when published and not future-dated. Pages are deliberately opt-in: the informational pages in `_plugins/ai_discovery.rb` are included, and additional public pages can set `ai_discovery: true` in front matter. Set `ai_discovery: false`, `published: false`, `robots: noindex`, `sitemap: false`, or `sitemap: { exclude: yes }` to exclude content. Avoid placing private information in the repository or in publicly rendered pages: these settings are not access controls. Review the generated output when templates or content structures change. The converter relies on the site's `post-content` wrapper and may retain some HTML or Kramdown formatting.
+
+Preview with `bundle exec jekyll serve --port 4001`, then visit `/llms.txt` and any linked Markdown path. An `--unpublished --future` preview displays draft HTML, so do not expose that preview server publicly. The generated AI directory and copies still exclude unpublished and future posts in that mode. Run `ruby test/ai_discovery_test.rb` and `bundle exec jekyll build` to verify changes.
+
+The generator is a custom Jekyll plugin. GitHub Pages' default branch-based Jekyll build runs in safe mode and will not execute it. In that mode, `llms.txt` falls back to a Liquid-generated list of public articles linking directly to HTML; Markdown copies and alternate links require a hosting build that runs `bundle exec jekyll build` without safe mode and deploys `_site` (for GitHub Pages, a custom Actions build and Pages deployment). Check the repository's actual Pages settings before changing the deployment source. Do not deploy a build made with `--unpublished` or `--future`.
+
+The llms.txt proposal is optional and support varies. Google says no special AI text files are required for its AI features. These files do not guarantee crawling, ranking, citation, or accurate answers.
